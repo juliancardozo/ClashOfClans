@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnCrearAldea = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnCrearAldea
+            // 
+            this.btnCrearAldea.Location = new System.Drawing.Point(166, 193);
+            this.btnCrearAldea.Name = "btnCrearAldea";
+            this.btnCrearAldea.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearAldea.TabIndex = 0;
+            this.btnCrearAldea.Text = "Crear Aldea";
+            this.btnCrearAldea.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnCrearAldea);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCrearAldea;
     }
 }
 
