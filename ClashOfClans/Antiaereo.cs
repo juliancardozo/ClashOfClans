@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Antiaereo
+    class Antiaereo:IAntiaereo
     {
+        private String nom;
+        public String nombre { get { return nom; } }
+        private Int32 vid;
+        public Int32 vida { get { return vid; } }
+        private Int32 niv;
+        public Int32 nivel { get { return niv; } }
+        private Int32 dan;
+        public Int32 dano { get { return dan; } }
+
+        public void AtacarTerrestre()
+        {
+            Console.WriteLine("Estoy atacando tropa aerea");
+        }
     }
 }

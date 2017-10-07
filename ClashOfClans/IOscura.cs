@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface Interface1
+    interface IOscura
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Pekka
+    class Pekka:ITropaNormal
     {
     }
 }

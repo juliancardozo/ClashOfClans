@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IProduccion
+    interface IProduccion:IEdificio
     {
+
     }
 }

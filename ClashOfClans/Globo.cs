@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Globo
+    class Globo:ITropaNormal
     {
     }
 }

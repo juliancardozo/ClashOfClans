@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface Defensivo
+    public interface IDefensivo:IEdificio
     {
+      
+        Int32 dano { get;  }
+
+
     }
 }

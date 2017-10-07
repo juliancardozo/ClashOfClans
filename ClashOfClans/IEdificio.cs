@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface Edificio
+    public interface IEdificio
     {
+        String nombre { get; }
+        Int32 vida { get; }
+
+        Int32 nivel { get;  }
+
+
     }
 }

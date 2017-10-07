@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Minero
+    class Minero:ITropaNormal
     {
     }
 }

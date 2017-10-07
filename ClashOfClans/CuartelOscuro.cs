@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class CuartelOscuro
+    class CuartelOscuro:IProduccion
     {
     }
 }
