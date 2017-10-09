@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class TorreArquera:IDefensivo
+    class TorreArquera : IDefensivo
     {
         private String nom;
         public String nombre { get { return nom; } }
@@ -21,4 +21,5 @@ namespace ClashOfClans
         {
             Console.WriteLine("Estoy atacando");
         }
+    }
 }
