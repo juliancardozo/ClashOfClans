@@ -8,5 +8,6 @@ namespace ClashOfClans
 {
     interface IHeroe:ITropa
     {
+        
     }
 }

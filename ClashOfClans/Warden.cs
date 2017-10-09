@@ -8,5 +8,6 @@ namespace ClashOfClans
 {
     class Warden:IHeroe
     {
+
     }
 }

@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btnCrearAldea);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "z";
             this.ResumeLayout(false);
 
         }

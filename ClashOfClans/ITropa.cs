@@ -8,5 +8,12 @@ namespace ClashOfClans
 {
     interface ITropa
     {
+        String nombre { get; }
+        Int32 nivel { get; }
+        Int32 velocidad { get; }
+        Int32 dano { get; }
+        Int32 espacio { get;}
+
+        void Atacar();
     }
 }
