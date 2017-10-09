@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class RecolectoraRecurso:IEdificio
+    class RecolectoraOro:IRecolectora
     {
         private String nom;
         public String nombre { get { return nom; } }
@@ -14,7 +14,15 @@ namespace ClashOfClans
         public Int32 vida { get { return vid; } }
         private Int32 niv;
         public Int32 nivel { get { return niv; } }
-        private Int32 dan;
-        public Int32 dano { get { return dan; } }
+
+        public RecolectoraOro() {
+               
+        }
+        
+        public Int32 Recolectar()
+        {
+            return 50;
+        }
+        
     }
 }

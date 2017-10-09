@@ -16,5 +16,10 @@ namespace ClashOfClans
         {
             InitializeComponent();
         }
+
+        private void btnCrearAldea_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
