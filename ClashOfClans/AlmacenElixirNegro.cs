@@ -24,7 +24,7 @@ namespace ClashOfClans
             capacidadDisponible -= elixirNegro;
         }
 
-        public void ExtraerElixirNegrp(Int32 elixirNegro)
+        public void ExtraerElixirNegro(Int32 elixirNegro)
         {
             capacidadDisponible += elixirNegro;
         }
