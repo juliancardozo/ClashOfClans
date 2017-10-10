@@ -29,6 +29,33 @@ namespace ClashOfClans
         List<RecolectoraElixirRojo> RecolectorasElixirRojo;
         List<RecolectoraElixirNegro> RecolectorasElixirNegro;
 
+        Warden Warden;
+        Rey Rey;
+        Reina Reina;
+
+        // Normales
+        List<Barbaro> Barbaros;
+        List<Arquera> Arqueras;
+        List<Gigante> Gigantes;
+        List<Mago> Magos;
+        List<Curandera> Curanderas;
+        List<DragonBebe> DragonesBebe;
+        List<Dragon> Dragones;
+        List<Minero> Mineros;
+        List<Pekka> Pekkas;
+        List<Minero> Mineros;
+        List<Globo> Globos;
+        List<Duende> Duendes;
+        List<Esqueleto> Esqueletos;
+
+        // Oscuras
+        List<Esbirro> Esbirros;
+        List<MontaPuerco> MontasPuerco;
+        List<Golem> Golems;
+        List<Valkiria> Valkirias;
+        List<Bruja> Brujas;
+        List<LanzaRoca> LanzaRocas;
+        List<Lava> Lavas;
 
     }
 }
