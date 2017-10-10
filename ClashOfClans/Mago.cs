@@ -18,5 +18,7 @@ namespace ClashOfClans
         {
             Console.WriteLine("Ataca el Mago.");
         }
+
+
     }
 }

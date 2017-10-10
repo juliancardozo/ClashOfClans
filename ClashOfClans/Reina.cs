@@ -16,7 +16,7 @@ namespace ClashOfClans
 
         public void Atacar()
         {
-            Console.WriteLine("Ataca el Reina.");
+            Console.WriteLine("Ataca la Reina.");
         }
     }
 }

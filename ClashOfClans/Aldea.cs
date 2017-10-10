@@ -43,7 +43,6 @@ namespace ClashOfClans
         List<Dragon> Dragones;
         List<Minero> Mineros;
         List<Pekka> Pekkas;
-        List<Minero> Mineros;
         List<Globo> Globos;
         List<Duende> Duendes;
         List<Esqueleto> Esqueletos;
