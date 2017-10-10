@@ -57,5 +57,51 @@ namespace ClashOfClans
         List<LanzaRoca> LanzaRocas;
         List<Lava> Lavas;
 
+        public Aldea()
+        {
+            Canones = new List<Canon>();
+            Antiaereos = new List<Antiaereo>();
+            TorresMago = new List<TorreMago>();
+            TorresArquera = new List<TorreArquera>();
+            TorresInfierno = new List<TorreInfierno>();
+            Muros = new List<Muro>();
+            Teslas = new List<Tesla>();
+            Aguilas = new List<Aguila>();
+            Ballestas = new List<Ballesta>();
+            Cuarteles = new List<Cuartel>();
+            CuartelesOscuro = new List<CuartelOscuro>();
+            Campamentos = new List<Campamento>();
+            AlmacenesOro = new List<AlmacenOro>();
+            AlmacenesElixirRojo = new List<AlmacenElixirRojo>();
+            AlmacenesElixirNegro = new List<AlmacenElixirNegro>();
+            RecolectorasOro = new List<RecolectoraOro>();
+            RecolectorasElixirRojo = new List<RecolectoraElixirRojo>();
+            RecolectorasElixirNegro = new List<RecolectoraElixirNegro>();
+
+            // Normales
+            Barbaros = new List<Barbaro>();
+            Arqueras = new List<Arquera>();
+            Gigantes = new List<Gigante>();
+            Magos = new List<Mago>();
+            Curanderas = new List<Curandera>();
+            DragonesBebe = new List<DragonBebe>();
+            Dragones = new List<Dragon>();
+            Mineros = new List<Minero>();
+            Pekkas = new List<Pekka>();
+            Mineros = new List<Minero>();
+            Globos = new List<Globo>();
+            Duendes = new List<Duende>();
+            Esqueletos = new List<Esqueleto>();
+
+            // Oscuras
+            Esbirros = new List<Esbirro>();
+            MontasPuerco = new List<MontaPuerco>();
+            Golems = new List<Golem>();
+            Valkirias = new List<Valkiria>();
+            Brujas = new List<Bruja>();
+            LanzaRocas = new List<LanzaRoca>();
+            Lavas = new List<Lava>();
+        }
+
     }
 }
