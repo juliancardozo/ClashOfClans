@@ -14,6 +14,14 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Esbirro()
+        {
+            this.nombre = "Esbirro";
+            this.nivel = 1;
+            this.velocidad = 25;
+            this.dano = 3;
+            this.espacio = 1;
+        }
         public void Atacar()
         {
             Console.WriteLine("Ataca el Esbirro.");

@@ -16,7 +16,7 @@ namespace ClashOfClans
         public Int32 nivel { get { return niv; } }
 
 
-        public void Generar()
+        public void CrearTropa()
         {
 
 

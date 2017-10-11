@@ -14,6 +14,14 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Minero()
+        {
+            this.nombre = "Minero";
+            this.nivel = 1;
+            this.velocidad = 20;
+            this.dano = 25;
+            this.espacio = 1;
+        }
         public void Atacar()
         {
             Console.WriteLine("Ataca el Minero.");

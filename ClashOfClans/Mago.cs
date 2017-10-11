@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Mago()
+        {
+            this.nombre = "Mago";
+            this.nivel = 1;
+            this.velocidad = 10;
+            this.dano = 9;
+            this.espacio = 1;
+        }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca el Mago.");

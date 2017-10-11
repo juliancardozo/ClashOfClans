@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public LanzaRoca()
+        {
+            this.nombre = "LanzaRoca";
+            this.nivel = 1;
+            this.velocidad = 15;
+            this.dano = 25;
+            this.espacio = 1;
+        }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca el LanzaRoca.");

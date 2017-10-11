@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Arquera()
+        {
+            this.nombre = "Arquera";
+            this.nivel = 1;
+            this.velocidad = 20;
+            this.dano = 7;
+            this.espacio = 1;
+        }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca la arquera.");

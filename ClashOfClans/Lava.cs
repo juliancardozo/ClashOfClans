@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Lava()
+        {
+            this.nombre = "Lava";
+            this.nivel = 1;
+            this.velocidad = 55;
+            this.dano = 45;
+            this.espacio = 1;
+        }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca la Lava.");

@@ -14,6 +14,14 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Duende()
+        {
+            this.nombre = "Duende";
+            this.nivel = 1;
+            this.velocidad = 35;
+            this.dano = 15;
+            this.espacio = 1;
+        }
         public void Atacar()
         {
             Console.WriteLine("Ataca el duende.");
