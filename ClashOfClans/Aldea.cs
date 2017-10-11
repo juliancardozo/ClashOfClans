@@ -67,6 +67,11 @@ namespace ClashOfClans
 
         public Aldea()
         {
+
+            almacenOro = 1000;
+            almacenElixirRojo = 800;
+            almacenElixirNegro = 500;
+
             Canones = new List<Canon>();
             Antiaereos = new List<Antiaereo>();
             TorresMago = new List<TorreMago>();
