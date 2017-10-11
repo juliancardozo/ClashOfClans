@@ -16,10 +16,13 @@ namespace ClashOfClans
         public Int32 nivel { get { return Nivel; } }
         private Int32 Dano;
         public Int32 dano { get { return Dano; } }
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
 
-        public Muro(String Nombre)
+        public Muro(String Aldea)
         {
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Muro";
             Vida = 1000;
             Nivel = 1;
             Dano = 150;
