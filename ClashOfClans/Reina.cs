@@ -8,6 +8,7 @@ namespace ClashOfClans
 {
     class Reina:IHeroe
     {
+        public Aldea aldea { get; } 
         public String nombre { get; }
         public Int32 nivel { get; }
         public Int32 velocidad { get; }
