@@ -8,15 +8,22 @@ namespace ClashOfClans
 {
     class TorreInfierno : IDefensivo
     {
-        private String nom;
-        public String nombre { get { return nom; } }
-        private Int32 vid;
-        public Int32 vida { get { return vid; } }
-        private Int32 niv;
-        public Int32 nivel { get { return niv; } }
-        private Int32 dan;
-        public Int32 dano { get { return dan; } }
+        private String Nombre;
+        public String nombre { get { return Nombre; } }
+        private Int32 Vida;
+        public Int32 vida { get { return Vida; } }
+        private Int32 Nivel;
+        public Int32 nivel { get { return Nivel; } }
+        private Int32 Dano;
+        public Int32 dano { get { return Dano; } }
 
+        public TorreInfierno(String Nombre)
+        {
+            this.Nombre = Nombre;
+            Vida = 1200;
+            Nivel = 1;
+            Dano = 200;
+        }
         public void AtacarTerrestre()
         {
             Console.WriteLine("Estoy atacando");

@@ -8,16 +8,27 @@ namespace ClashOfClans
 {
     class AlmacenOro:IAlmacen
     {
-        private String nom;
-        public String nombre { get { return nom; } }
-        private Int32 vid;
-        public Int32 vida { get { return vid; } }
-        private Int32 niv;
-        public Int32 nivel { get { return niv; } }
+
+        private String Nombre;
+        public String nombre { get { return Nombre; } }
+        private Int32 Vida;
+        public Int32 vida { get { return Vida; } }
+        private Int32 Nivel;
+        public Int32 nivel { get { return Nivel; } }
+  
         private Int32 capMax;
         public Int32 capacidadMaxima { get { return capMax; } set { value = capMax; } }
         private Int32 capDis;
         public Int32 capacidadDisponible { get { return capDis; } set {value= capDis; } }
+
+        public AlmacenOro(String Nombre)
+        {
+            this.Nombre = Nombre;
+            Vida = 1000;
+            Nivel = 1;
+            capMax = 2500;
+            capDis = 2500;
+        }
 
         public void AlmacenarOro(Int32 oro)
         {

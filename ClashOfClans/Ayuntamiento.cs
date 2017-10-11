@@ -8,21 +8,24 @@ namespace ClashOfClans
 {
     class Ayuntamiento : IEdificio
     {
-        private String nom;
-        public String nombre { get { return nom; } }
-        private Int32 vid;
-        public Int32 vida { get { return vid; } }
-        private Int32 niv;
-        public Int32 nivel { get { return niv; } }
+        
+            private String Nombre;
+            public String nombre { get { return Nombre; } }
+            private Int32 Vida;
+            public Int32 vida { get { return Vida; } }
+            private Int32 Nivel;
+            public Int32 nivel { get { return Nivel; } }
+            public Int32 almacenOro;
+            public Int32 almacenElixirRojo;
 
-        public Int32 almacenOro;
-        public Int32 almacenElixirRojo;
-
-        public Ayuntamiento(Int32 almacenOro, Int32 almacenElixirRojo)
+        public Ayuntamiento(String Nombre)
         {
-            this.almacenOro = almacenOro;
-            this.almacenElixirRojo = almacenElixirRojo;
-            
+            this.Nombre = Nombre;
+            almacenElixirRojo = 0;
+            almacenOro = 0;
+            Vida = 1500;
+            Nivel = 0;
+
         }
 
         public void IngresarOro(Int32 oro)

@@ -8,15 +8,21 @@ namespace ClashOfClans
 {
     class RecolectoraElixirNegro:IRecolectora
     {
-        private String nom;
-        public String nombre { get { return nom; } }
-        private Int32 vid;
-        public Int32 vida { get { return vid; } }
-        private Int32 niv;
-        public Int32 nivel { get { return niv; } }
-        private Int32 dan;
-        public Int32 dano { get { return dan; } }
+        private String Nombre;
+        public String nombre { get { return Nombre; } }
+        private Int32 Vida;
+        public Int32 vida { get { return Vida; } }
+        private Int32 Nivel;
+        public Int32 nivel { get { return Nivel; } }
 
+
+        public RecolectoraElixirNegro(String Nombre)
+        {
+            this.Nombre = Nombre;
+            Vida = 1000;
+            Nivel = 1;
+            
+        }
         public RecolectoraElixirNegro() { }
 
         public Int32 Recolectar()
