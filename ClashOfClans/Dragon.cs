@@ -14,6 +14,14 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Dragon()
+        {
+            this.nombre = "Dragón";
+            this.nivel = 1;
+            this.velocidad = 40;
+            this.dano = 35;
+            this.espacio = 1;
+        }
         public void Atacar()
         {
             Console.WriteLine("Ataca el dragón.");

@@ -24,7 +24,7 @@ namespace ClashOfClans
             
         }
 
-        public void Generar()
+        public void CrearTropa()
         {
 
 

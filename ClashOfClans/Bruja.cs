@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+        public Bruja()
+        {
+            this.nombre = "Bruja";
+            this.nivel = 1;
+            this.velocidad = 15;
+            this.dano = 55;
+            this.espacio = 1;
+        }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca la bruja.");

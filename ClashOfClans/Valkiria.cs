@@ -14,6 +14,15 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
+
+        public Valkiria()
+        {
+            this.nombre = "Valkiria";
+            this.nivel = 1;
+            this.velocidad = 30;
+            this.dano = 30;
+            this.espacio = 1;
+        }
         public void Atacar()
         {
             Console.WriteLine("Ataca Valkiria.");
