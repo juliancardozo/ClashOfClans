@@ -14,12 +14,12 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
-        public Barbaro(String nombre, Int32 nivel, Int32 velocidad, Int32 dano, Int32 espacio ) {
-            this.nombre = nombre;
-            this.nivel = nivel;
-            this.velocidad = velocidad;
-            this.dano = dano;
-            this.espacio = espacio;
+        public Barbaro() {
+            this.nombre = "Barbaro";
+            this.nivel = 1;
+            this.velocidad = 50;
+            this.dano = 8;
+            this.espacio = 1;
         }
 
         public void Atacar()
