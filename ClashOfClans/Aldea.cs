@@ -8,6 +8,15 @@ namespace ClashOfClans
 {
     class Aldea
     {
+
+        private Int32 almacenOro;
+        private Int32 almacenElixirRojo;
+        private Int32 almacenElixirNegro;
+
+        public int AlmacenOro { get => almacenOro; set => almacenOro = value; }
+        public int AlmacenElixirRojo { get => almacenElixirRojo; set => almacenElixirRojo = value; }
+        public int AlmacenElixirNegro { get => almacenElixirNegro; set => almacenElixirNegro = value; }
+
         List<Canon> Canones;
         List<Antiaereo> Antiaereos;
         List<TorreMago> TorresMago;
@@ -19,8 +28,8 @@ namespace ClashOfClans
         List<Ballesta> Ballestas;
         List<Cuartel> Cuarteles;
         List<CuartelOscuro> CuartelesOscuro;
-        Ayuntamiento Ayuntamiento;
-        Castillo Castillo;
+        readonly Ayuntamiento Ayuntamiento;
+        readonly Castillo Castillo;
         List<Campamento> Campamentos;
         List<AlmacenOro> AlmacenesOro;
         List<AlmacenElixirRojo> AlmacenesElixirRojo;
@@ -29,9 +38,9 @@ namespace ClashOfClans
         List<RecolectoraElixirRojo> RecolectorasElixirRojo;
         List<RecolectoraElixirNegro> RecolectorasElixirNegro;
 
-        Warden Warden;
-        Rey Rey;
-        Reina Reina;
+        readonly Warden Warden;
+        readonly Rey Rey;
+        readonly Reina Reina;
 
         // Normales
         List<Barbaro> Barbaros;
@@ -100,7 +109,126 @@ namespace ClashOfClans
             Brujas = new List<Bruja>();
             LanzaRocas = new List<LanzaRoca>();
             Lavas = new List<Lava>();
+
         }
+
+        public void crearEdificio(String edificio)
+        {
+            if (edificio == "Ayuntamiento")
+            {
+                if(Ayuntamiento == null)
+                {
+                    Ayuntamiento = new Ayuntamiento();
+                }
+            }
+            else if (edificio == "Castillo")
+            {
+                if(Castillo == null)
+                {
+                    Castillo = new Castillo();
+                }
+            }
+            else if (edificio == "Canon")
+            {
+                Canones.Add(new Canon());
+            }
+            else if (edificio == "Antiaereo")
+            {
+                Antiaereos.Add(new Antiaereo());
+            }
+            else if (edificio == "TorreMago")
+            {
+                TorresMago.Add(new TorreMago());
+
+            }
+            else if (edificio == "TorreArquera")
+            {
+                TorresArquera.Add(new TorreArquera());
+
+            }
+            else if (edificio == "TorreInfierno")
+            {
+                TorresInfierno.Add(new TorreInfierno());
+
+            }
+            else if (edificio == "Muro")
+            {
+                Muros.Add(new Muro());
+
+            }
+            else if (edificio == "Tesla")
+            {
+                Teslas.Add(new Tesla());
+
+            }
+            else if (edificio == "Aguila")
+            {
+                Aguilas.Add(new Aguila());
+
+            }
+            else if (edificio == "Ballesta")
+            {
+                Ballestas.Add(new Ballesta());
+
+            }
+            else if (edificio == "Cuartel")
+            {
+                Cuarteles.Add(new Cuartel());
+
+            }
+            else if (edificio == "CuartelOscuro")
+            {
+                CuartelesOscuro.Add(new CuartelOscuro());
+
+            }
+            else if (edificio == "Campamento")
+            {
+                if(Campamentos.Count < 4)
+                {
+                    Campamentos.Add(new Campamento());
+                }
+
+
+            }
+            else if (edificio == "AlmacenOro")
+            {
+                if(AlmacenesOro.Count < 4) { 
+                    AlmacenesOro.Add(new AlmacenOro());
+                }
+            }
+            else if (edificio == "AlmacenElixirRojo")
+            {
+                if(AlmacenesElixirRojo.Count < 4) {
+                    AlmacenesElixirRojo.Add(new AlmacenElixirRojo());
+                }
+            }
+            else if (edificio == "AlmacenElixirNegro")
+            {
+                if(AlmacenesElixirNegro.Count < 1) {
+                    AlmacenesElixirNegro.Add(new AlmacenElixirNegro());
+                }
+            }
+            else if (edificio == "RecolectoraOro")
+            {
+                if(RecolectorasOro.Count < 6) {
+                    RecolectorasOro.Add(new RecolectoraOro());
+                }
+            }
+            else if (edificio == "RecolectoraElixirRojo")
+            {
+                if(RecolectorasElixirRojo.Count < 6) {
+                    RecolectorasElixirRojo.Add(new RecolectoraElixirRojo());
+                }
+            }
+            else if (edificio == "RecolectoraElixirNegro")
+            {
+                if(RecolectorasElixirNegro.Count < 3) {
+                    RecolectorasElixirNegro.Add(new RecolectoraElixirNegro());
+                }
+            }
+
+        }
+
 
     }
 }
