@@ -123,74 +123,74 @@ namespace ClashOfClans
             {
                 if(Ayuntamiento == null)
                 {
-                    Ayuntamiento = new Ayuntamiento();
+                    Ayuntamiento = new Ayuntamiento(this);
                 }
             }
             else if (edificio == "Castillo")
             {
                 if(Castillo == null)
                 {
-                    Castillo = new Castillo();
+                    Castillo = new Castillo(this);
                 }
             }
             else if (edificio == "Canon")
             {
-                Canones.Add(new Canon());
+                Canones.Add(new Canon(this));
             }
             else if (edificio == "Antiaereo")
             {
-                Antiaereos.Add(new Antiaereo());
+                Antiaereos.Add(new Antiaereo(this));
             }
             else if (edificio == "TorreMago")
             {
-                TorresMago.Add(new TorreMago());
+                TorresMago.Add(new TorreMago(this));
 
             }
             else if (edificio == "TorreArquera")
             {
-                TorresArquera.Add(new TorreArquera());
+                TorresArquera.Add(new TorreArquera(this));
 
             }
             else if (edificio == "TorreInfierno")
             {
-                TorresInfierno.Add(new TorreInfierno());
+                TorresInfierno.Add(new TorreInfierno(this));
 
             }
             else if (edificio == "Muro")
             {
-                Muros.Add(new Muro());
+                Muros.Add(new Muro(this));
 
             }
             else if (edificio == "Tesla")
             {
-                Teslas.Add(new Tesla());
+                Teslas.Add(new Tesla(this));
 
             }
             else if (edificio == "Aguila")
             {
-                Aguilas.Add(new Aguila());
+                Aguilas.Add(new Aguila(this));
 
             }
             else if (edificio == "Ballesta")
             {
-                Ballestas.Add(new Ballesta());
+                Ballestas.Add(new Ballesta(this));
 
             }
             else if (edificio == "Cuartel")
             {
-                Cuarteles.Add(new Cuartel());
+                Cuarteles.Add(new Cuartel(this));
 
             }
             else if (edificio == "CuartelOscuro")
             {
-                CuartelesOscuro.Add(new CuartelOscuro());
+                CuartelesOscuro.Add(new CuartelOscuro(this));
 
             }
             else if (edificio == "Campamento")
             {
                 if(Campamentos.Count < 4)
                 {
-                    Campamentos.Add(new Campamento());
+                    Campamentos.Add(new Campamento(this));
                 }
 
 
@@ -198,40 +198,47 @@ namespace ClashOfClans
             else if (edificio == "AlmacenOro")
             {
                 if(AlmacenesOro.Count < 4) { 
-                    AlmacenesOro.Add(new AlmacenOro());
+                    AlmacenesOro.Add(new AlmacenOro(this));
                 }
             }
             else if (edificio == "AlmacenElixirRojo")
             {
                 if(AlmacenesElixirRojo.Count < 4) {
-                    AlmacenesElixirRojo.Add(new AlmacenElixirRojo());
+                    AlmacenesElixirRojo.Add(new AlmacenElixirRojo(this));
                 }
             }
             else if (edificio == "AlmacenElixirNegro")
             {
                 if(AlmacenesElixirNegro.Count < 1) {
-                    AlmacenesElixirNegro.Add(new AlmacenElixirNegro());
+                    AlmacenesElixirNegro.Add(new AlmacenElixirNegro(this));
                 }
             }
             else if (edificio == "RecolectoraOro")
             {
                 if(RecolectorasOro.Count < 6) {
-                    RecolectorasOro.Add(new RecolectoraOro());
+                    RecolectorasOro.Add(new RecolectoraOro(this));
                 }
             }
             else if (edificio == "RecolectoraElixirRojo")
             {
                 if(RecolectorasElixirRojo.Count < 6) {
-                    RecolectorasElixirRojo.Add(new RecolectoraElixirRojo());
+                    RecolectorasElixirRojo.Add(new RecolectoraElixirRojo(this));
                 }
             }
             else if (edificio == "RecolectoraElixirNegro")
             {
                 if(RecolectorasElixirNegro.Count < 3) {
-                    RecolectorasElixirNegro.Add(new RecolectoraElixirNegro());
+                    RecolectorasElixirNegro.Add(new RecolectoraElixirNegro(this));
                 }
             }
+        }
 
+        public void crearWarden()
+        {
+            if(Warden == null)
+            {
+                Warden = new Warden(this);
+            }
         }
 
 
