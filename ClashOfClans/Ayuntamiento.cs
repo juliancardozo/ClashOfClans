@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Ayuntamiento : IEdificio
+    public class Ayuntamiento : IEdificio
     {
         private String Nombre;
         public String nombre { get { return Nombre; } }
@@ -16,10 +16,10 @@ namespace ClashOfClans
         public Int32 nivel { get { return Nivel; } }
         public Int32 almacenOro;
         public Int32 almacenElixirRojo;
-        public String Aldea;
-        public String aldea { get { return Aldea; } set { value = Aldea; } }
+        public Aldea Aldea;
+        public Aldea aldea { get { return Aldea; } set { value = Aldea; } }
 
-        public Ayuntamiento(String Aldea)
+        public Ayuntamiento(Aldea Aldea)
         {
             this.Aldea = Aldea;
             Nombre = "Ayuntamiento";

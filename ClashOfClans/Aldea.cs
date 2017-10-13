@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Aldea
+    public class Aldea
     {
 
         private Int32 almacenOro;
@@ -123,14 +123,14 @@ namespace ClashOfClans
             {
                 if(Ayuntamiento == null)
                 {
-                    Ayuntamiento = new Ayuntamiento(this);
+                    Ayuntamiento Ayuntamiento = new Ayuntamiento(this);
                 }
             }
             else if (edificio == "Castillo")
             {
                 if(Castillo == null)
                 {
-                    Castillo = new Castillo(this);
+                    Castillo Castillo = new Castillo(this);
                 }
             }
             else if (edificio == "Canon")
