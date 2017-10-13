@@ -8,24 +8,22 @@ namespace ClashOfClans
 {
     class Aguila:IDefensivo
     {
-        private String Nombre;
-        public String nombre { get { return Nombre; } }
-        private Int32 Vida;
-        public Int32 vida { get { return Vida; } }
-        private Int32 Nivel;
-        public Int32 nivel { get { return Nivel; } }
-        private Int32 Dano;
-        public Int32 dano { get { return Dano; } }
-        public String Aldea;
-        public String aldea { get { return Aldea; } set { value = Aldea; } }
+        public String nombre { get; }
 
-        public Aguila(String Aldea)
+        public Int32 vida { get; }
+
+        public Int32 nivel { get; }
+
+        public Int32 dano { get; }
+
+        public Aldea aldea { get; set; }
+        public Aguila(Aldea aldea)
         {
-            this.Aldea = Aldea;
-            Nombre = "Äguila";
-            Vida = 1000;
-            Nivel = 1;
-            Dano = 150;
+            this.aldea = aldea;
+            nombre = "Äguila";
+            vida = 1000;
+            nivel = 1;
+            dano = 150;
         }
 
         public void AtacarTerrestre()
