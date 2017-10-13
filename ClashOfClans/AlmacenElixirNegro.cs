@@ -19,11 +19,14 @@ namespace ClashOfClans
         public Int32 capacidadMaxima { get { return capMax; } set { value = capMax; } }
         private Int32 capDis;
         public Int32 capacidadDisponible { get { return capDis; } set { value = capDis; } }
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
 
 
-        public AlmacenElixirNegro(String Nombre)
+        public AlmacenElixirNegro(String Aldea)
         {
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Almacen Elixir Negro";
             Vida = 1000;
             Nivel = 1;
             capMax = 2500;

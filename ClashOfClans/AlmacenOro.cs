@@ -21,9 +21,12 @@ namespace ClashOfClans
         private Int32 capDis;
         public Int32 capacidadDisponible { get { return capDis; } set {value= capDis; } }
 
-        public AlmacenOro(String Nombre)
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
+        public AlmacenOro(String Aldea)
         {
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Almacen Oro";
             Vida = 1000;
             Nivel = 1;
             capMax = 2500;

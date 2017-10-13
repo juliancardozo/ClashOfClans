@@ -14,6 +14,8 @@ namespace ClashOfClans
         public Int32 vida { get { return Vida; } }
         private Int32 Nivel;
         public Int32 nivel { get { return Nivel; } }
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
 
         public Int32 almacenOro;
         public Int32 almacenElixirRojo;
@@ -22,7 +24,7 @@ namespace ClashOfClans
         public List<ITropa> tropas;
         public String nombreCastillo;
                
-        public Castillo(String Nombre, String nombreCastillo)
+        public Castillo(String Aldea, String nombreCastillo)
         {
             almacenOro = 0;
             almacenElixirRojo = 0;
@@ -30,7 +32,8 @@ namespace ClashOfClans
             espacio = 1000;
             tropas = new List<ITropa>();
             this.nombreCastillo = nombreCastillo;
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Castillo";
             almacenElixirRojo = 0;
             almacenOro = 0;
             Vida = 1500;
