@@ -65,6 +65,8 @@ namespace ClashOfClans
         List<LanzaRoca> LanzaRocas;
         List<Lava> Lavas;
 
+        Dictionary<String, IFactory> constructores;
+
         public Aldea()
         {
 
@@ -114,6 +116,9 @@ namespace ClashOfClans
             Brujas = new List<Bruja>();
             LanzaRocas = new List<LanzaRoca>();
             Lavas = new List<Lava>();
+
+            constructores = new Dictionary<string, IFactory>;
+            constructores.Add("Arquera", new FactoryArquera(this));
 
         }
 

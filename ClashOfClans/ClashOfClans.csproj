@@ -68,6 +68,8 @@
     <Compile Include="Duende.cs" />
     <Compile Include="Esbirro.cs" />
     <Compile Include="Esqueleto.cs" />
+    <Compile Include="Factory\FactoryArquera.cs" />
+    <Compile Include="Factory\IFactory.cs" />
     <Compile Include="Gigante.cs" />
     <Compile Include="Globo.cs" />
     <Compile Include="Golem.cs" />
@@ -135,6 +137,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
