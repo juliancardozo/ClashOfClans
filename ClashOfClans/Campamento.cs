@@ -8,24 +8,24 @@ namespace ClashOfClans
 {
     class Campamento:IEdificio
     {
-        private String Nombre;
-        public String nombre { get { return Nombre; } }
-        private Int32 Vida;
-        public Int32 vida { get { return Vida; } }
-        private Int32 Nivel;
-        public Int32 nivel { get { return Nivel; } }
+        public String nombre { get; }
+
+        public Int32 vida { get; }
+
+        public Int32 nivel { get; }
+
+        public Aldea aldea { get; set; }
 
         public Int32 capacidad;
-        public String Aldea;
-        public String aldea { get { return Aldea; } set { value = Aldea; } }
+      
 
-        public Campamento(String Aldea)
+        public Campamento(Aldea Aldea)
         {
             capacidad = 100;
-            this.Aldea = Aldea;
-            Nombre = "Campamento";
-            Vida = 1000;
-            Nivel = 1;
+            this.aldea = aldea;
+            nombre = "Campamento";
+            vida = 1000;
+            nivel = 1;
         }
 
         public void IngresarTropa()

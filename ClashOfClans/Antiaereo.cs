@@ -8,24 +8,24 @@ namespace ClashOfClans
 {
     class Antiaereo:IAntiaereo
     {
-        private String Nombre;
-        public String nombre { get { return Nombre; } }
-        private Int32 Vida;
-        public Int32 vida { get { return Vida; } }
-        private Int32 Nivel;
-        public Int32 nivel { get { return Nivel; } }
-        private Int32 Dano;
-        public Int32 dano { get { return Dano; } }
-        public Aldea Aldea;
-        public Aldea aldea { get { return Aldea; } set { value = Aldea; } }
+        public String nombre { get; }
 
-        public Antiaereo(Aldea Aldea)
+        public Int32 vida { get; }
+
+        public Int32 nivel { get; }
+
+        public Int32 dano { get; }
+
+        public Aldea aldea { get; set; }
+        
+
+        public Antiaereo(Aldea aldea)
         {
-            this.Aldea = Aldea;
-            Nombre = "Antiaereo";
-            Vida = 1000;
-            Nivel = 1;
-            Dano = 150;
+            this.aldea = aldea;
+            nombre = "Antiaereo";
+            vida = 1000;
+            nivel = 1;
+            dano = 150;
         }
 
         public void AtacarTerrestre()

@@ -12,7 +12,7 @@ namespace ClashOfClans
         Int32 vida { get; }
 
         Int32 nivel { get;  }
-        String aldea { get; set; }
+        Aldea aldea { get; set; }
 
 
     }

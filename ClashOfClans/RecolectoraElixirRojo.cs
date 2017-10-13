@@ -8,21 +8,22 @@ namespace ClashOfClans
 {
     class RecolectoraElixirRojo:IRecolectora
     {
-        private String Nombre;
-        public String nombre { get { return Nombre; } }
-        private Int32 Vida;
-        public Int32 vida { get { return Vida; } }
-        private Int32 Nivel;
-        public Int32 nivel { get { return Nivel; } }
-        public String Aldea;
-        public String aldea { get { return Aldea; } set { value = Aldea; } }
+        public String nombre { get; }
 
-        public RecolectoraElixirRojo(String Aldea)
+        public Int32 vida { get; }
+
+        public Int32 nivel { get; }
+
+        public Int32 dano { get; }
+
+        public Aldea aldea { get; set; }
+
+        public RecolectoraElixirRojo(Aldea aldea)
         {
-            this.Aldea = Aldea;
-            Nombre="Recolectora Elixir Rojo";
-            Vida = 1000;
-            Nivel = 1;
+            this.aldea = aldea;
+            nombre="Recolectora Elixir Rojo";
+            vida = 1000;
+            nivel = 1;
 
         }
 

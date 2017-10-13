@@ -8,24 +8,23 @@ namespace ClashOfClans
 {
     class TorreInfierno : IDefensivo
     {
-        private String Nombre;
-        public String nombre { get { return Nombre; } }
-        private Int32 Vida;
-        public Int32 vida { get { return Vida; } }
-        private Int32 Nivel;
-        public Int32 nivel { get { return Nivel; } }
-        private Int32 Dano;
-        public Int32 dano { get { return Dano; } }
-        public String Aldea;
-        public String aldea { get { return Aldea; } set { value = Aldea; } }
-
-        public TorreInfierno(String Aldea)
+        
+        public String nombre { get; }
+        
+        public Int32 vida { get;}
+        
+        public Int32 nivel { get;  }
+    
+        public Int32 dano { get;  }
+        
+        public Aldea aldea { get; set; }
+        public TorreInfierno(Aldea aldea)
         {
-            this.Aldea = Aldea;
-            Nombre = "Torre Infierno";
-            Vida = 1200;
-            Nivel = 1;
-            Dano = 200;
+            this.aldea = aldea;
+            nombre = "Torre Infierno";
+            vida = 1200;
+            nivel = 1;
+            dano = 200;
         }
         public void AtacarTerrestre()
         {

@@ -10,23 +10,23 @@ namespace ClashOfClans
     {
         class Cuartel : IProduccion
         {
-            private String Nombre;
-            public String nombre { get { return Nombre; } }
-            private Int32 Vida;
-            public Int32 vida { get { return Vida; } }
-            private Int32 Nivel;
-            public Int32 nivel { get { return Nivel; } }
+            public String nombre { get; }
 
-            public String Aldea;
-            public String aldea { get { return Aldea; } set { value = Aldea; } }
+            public Int32 vida { get; }
+
+            public Int32 nivel { get; }
+
+            public Int32 dano { get; }
+
+            public Aldea aldea { get; set; }
 
 
-            public Cuartel(String Aldea)
+            public Cuartel(Aldea aldea)
             {
-                this.Aldea = Aldea;
-                Nombre = "Cuartel Oscuro";
-                Vida = 1000;
-                Nivel = 1;
+                this.aldea = aldea;
+                nombre = "Cuartel Oscuro";
+                vida = 1000;
+                nivel = 1;
 
             }
 
