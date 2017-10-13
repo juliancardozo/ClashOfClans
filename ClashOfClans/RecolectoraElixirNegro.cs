@@ -14,11 +14,14 @@ namespace ClashOfClans
         public Int32 vida { get { return Vida; } }
         private Int32 Nivel;
         public Int32 nivel { get { return Nivel; } }
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
 
 
-        public RecolectoraElixirNegro(String Nombre)
+        public RecolectoraElixirNegro(String Aldea)
         {
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Recolectora Elixir Negro";
             Vida = 1000;
             Nivel = 1;
             
