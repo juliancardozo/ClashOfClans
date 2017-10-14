@@ -241,13 +241,19 @@ namespace ClashOfClans
             }
         }
 
+        public void crearRey()
         {
+            if (Rey == null)
             {
+                Rey = new Rey(this);
             }
         }
 
+        public void crearRey()
         {
+            if (Rey == null)
             {
+                Rey = new Rey(this);
             }
         }
 
