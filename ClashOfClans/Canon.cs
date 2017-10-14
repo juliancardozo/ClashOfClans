@@ -17,9 +17,13 @@ namespace ClashOfClans
         private Int32 Dano;
         public Int32 dano { get { return Dano; } }
 
-        public Canon(String Nombre)
+        public String Aldea;
+        public String aldea { get { return Aldea; } set { value = Aldea; } }
+
+        public Canon(String Aldea)
         {
-            this.Nombre = Nombre;
+            this.Aldea = Aldea;
+            Nombre = "Canon";
             Vida = 1000;
             Nivel = 1;
             Dano = 150;
