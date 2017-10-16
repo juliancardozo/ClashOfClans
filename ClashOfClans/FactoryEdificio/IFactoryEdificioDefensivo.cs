@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class FactoryCanon : IFactoryDefensivo
+    interface IFactoryDefensivo
     {
-    
-        public IDefensivo Instanciar(Aldea aldea)
-        {
-            return new Canon(aldea);
-        }
+        IDefensivo Instanciar(Aldea aldea);
     }
 }

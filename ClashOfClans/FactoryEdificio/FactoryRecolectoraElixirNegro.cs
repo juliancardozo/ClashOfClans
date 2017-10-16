@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class FactoryMuro: IFactoryEdificio
+    class FactoryRecolectoraElixirNegro: IFactoryRecolectora
     {
     
-        public IEdificio Instanciar(Aldea aldea)
+        public IRecolectora Instanciar(Aldea aldea)
         {
-            return new Muro(aldea);
+            return new RecolectoraElixirNegro(aldea);
         }
     }
 }

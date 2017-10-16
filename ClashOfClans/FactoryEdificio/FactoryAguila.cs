@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class FactoryAguila: IFactoryEdificio
+    class FactoryAguila: IFactoryDefensivo
     {
     
-        public IEdificio Instanciar(Aldea aldea)
+        public IDefensivo Instanciar(Aldea aldea)
         {
             return new Aguila(aldea);
         }

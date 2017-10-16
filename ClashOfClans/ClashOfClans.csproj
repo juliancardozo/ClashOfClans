@@ -71,6 +71,7 @@
     <Compile Include="FactoryEdificio\FactoryAguila.cs" />
     <Compile Include="FactoryEdificio\FactoryAlmacenElixirRojo.cs" />
     <Compile Include="FactoryEdificio\FactoryAlmacenElixirNegro.cs" />
+    <Compile Include="FactoryEdificio\FactoryRecolectoraElixirNegro.cs" />
     <Compile Include="FactoryEdificio\FactoryRecolectoraElixirRojo.cs" />
     <Compile Include="FactoryEdificio\FactoryRecolectoraOro.cs" />
     <Compile Include="FactoryEdificio\FactoryAlmacenOro.cs" />
@@ -81,12 +82,16 @@
     <Compile Include="FactoryEdificio\FactoryCuartel.cs" />
     <Compile Include="FactoryEdificio\FactoryBallesta.cs" />
     <Compile Include="FactoryEdificio\FactoryTesla.cs" />
-    <Compile Include="FactoryEdificio\IFactoryMuro.cs" />
+    <Compile Include="FactoryEdificio\FactoryMuro.cs" />
     <Compile Include="FactoryEdificio\FactoryTorreInfierno.cs" />
     <Compile Include="FactoryEdificio\FactoryTorreArquera.cs" />
     <Compile Include="FactoryEdificio\FactoryTorreMago.cs" />
     <Compile Include="FactoryEdificio\FactoryAntiAereo.cs" />
     <Compile Include="FactoryEdificio\FactoryCanon.cs" />
+    <Compile Include="FactoryEdificio\IFactoryAlmacen.cs" />
+    <Compile Include="FactoryEdificio\IFactoryRecolectora.cs" />
+    <Compile Include="FactoryEdificio\IFactoryProduccion.cs" />
+    <Compile Include="FactoryEdificio\IFactoryEdificioDefensivo.cs" />
     <Compile Include="FactoryEdificio\IFactoryEdificio.cs" />
     <Compile Include="Factory\FactoryArquera.cs" />
     <Compile Include="Factory\IFactory.cs" />
