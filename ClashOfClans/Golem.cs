@@ -16,7 +16,7 @@ namespace ClashOfClans
         public Int32 espacio { get; }
 
 
-        public Golem()
+        public Golem(Aldea aldea)
         {
             this.nombre = "Golem";
             this.nivel = 1;

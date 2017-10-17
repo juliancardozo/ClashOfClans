@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class FactoryArquera : IFactory
+    interface IFactoryTropaOscura
     {
-    
-        public ITropa Instanciar(Aldea aldea)
-        {
-            return new Arquera(aldea);
-        }
+       ITropa Instanciar(Aldea aldea);
     }
 }

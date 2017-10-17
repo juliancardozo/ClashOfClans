@@ -16,7 +16,7 @@ namespace ClashOfClans
         public Int32 espacio { get; }
 
 
-        public Valkiria()
+        public Valkiria(Aldea aldea)
         {
             this.nombre = "Valkiria";
             this.nivel = 1;

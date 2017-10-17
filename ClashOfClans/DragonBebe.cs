@@ -15,7 +15,7 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
-        public DragonBebe()
+        public DragonBebe(Aldea aldea)
         {
             this.nombre = "Dragón Bebé";
             this.nivel = 1;
