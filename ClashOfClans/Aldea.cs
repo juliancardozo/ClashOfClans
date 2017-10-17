@@ -254,11 +254,11 @@ namespace ClashOfClans
             }
         }
 
-        public void crearRey()
+        public void crearReina()
         {
-            if (Rey == null)
+            if (Reina == null)
             {
-                Rey = new Rey(this);
+                Reina = new Reina(this);
             }
         }
 

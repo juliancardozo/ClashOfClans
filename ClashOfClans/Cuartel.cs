@@ -28,9 +28,9 @@ namespace ClashOfClans
             
         }
 
-        public void CrearTropa()
+        public void CrearTropa(Aldea aldea)
         {
-
+            
 
         }
     }
