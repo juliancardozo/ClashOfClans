@@ -8,8 +8,7 @@ namespace ClashOfClans
 {
     class CuartelOscuro:IProduccion
     {
-        class Cuartel : IProduccion
-        {
+        
             public String nombre { get; }
 
             public Int32 vida { get; }
@@ -21,7 +20,7 @@ namespace ClashOfClans
             public Aldea aldea { get; set; }
 
 
-            public Cuartel(Aldea aldea)
+            public CuartelOscuro(Aldea aldea)
             {
                 this.aldea = aldea;
                 nombre = "Cuartel Oscuro";
