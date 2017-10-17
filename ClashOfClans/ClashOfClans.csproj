@@ -110,8 +110,6 @@
     <Compile Include="FactoryEdificio\IFactoryProduccion.cs" />
     <Compile Include="FactoryEdificio\IFactoryEdificioDefensivo.cs" />
     <Compile Include="FactoryEdificio\IFactoryEdificio.cs" />
-    <Compile Include="Factory\FactoryArquera.cs" />
-    <Compile Include="Factory\IFactory.cs" />
     <Compile Include="Gigante.cs" />
     <Compile Include="Globo.cs" />
     <Compile Include="Golem.cs" />
