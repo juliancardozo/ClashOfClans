@@ -8,6 +8,6 @@ namespace ClashOfClans
 {
     interface IFactoryTropaOscura
     {
-       ITropa Instanciar(Aldea aldea);
+       ITropaOscura Instanciar(Aldea aldea);
     }
 }

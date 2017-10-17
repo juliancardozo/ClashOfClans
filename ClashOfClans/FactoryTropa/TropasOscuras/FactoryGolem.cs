@@ -9,7 +9,7 @@ namespace ClashOfClans
     class FactoryGolem : IFactoryTropaOscura
     {
     
-        public ITropa Instanciar(Aldea aldea)
+        public ITropaOscura Instanciar(Aldea aldea)
         {
             return new Golem(aldea);
         }
