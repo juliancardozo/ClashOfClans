@@ -49,9 +49,25 @@ namespace ClashOfClans
             Edificios = new List<IEdificio>();
             Tropas = new List<ITropa>();
 
-            constructores = new Dictionary<string, IFactory>;
+            constructores = new Dictionary<string, IFactoryTropaNormal>;
             constructores.Add("Arquera", new FactoryArquera(this));
+            constructores.Add("Barbaro", new FactoryBarbaro(this));
+            constructores.Add("Gigante", new FactoryGigante(this));
+            constructores.Add("Mago", new FactoryMago(this));
+            constructores.Add("Curandera", new FactoryCurandera(this));
+            constructores.Add("DragonBebe", new FactoryDragonBebe(this));
+            constructores.Add("Pekka", new FactoryPekka(this));
+            constructores.Add("Dragon", new FactoryDragon(this));
+            constructores.Add("Minero", new FactoryMinero(this));
+            constructores.Add("Globo", new FactoryGlobo(this));
+            constructores.Add("Duende", new FactoryDuende(this));
+            constructores.Add("Esqueleto", new FactoryEsqueleto(this));
 
+            constructoresTropaOscuro = new Dictionary<string, IFactoryTropaOscura>;
+            constructoresTropaOscuro.Add("Esbirro", new FactoryEsbirro(this));
+            constructoresTropaOscuro.Add("Lava", new FactoryLava(this));
+            constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca(this));
+            constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco(this));
         }
 
         public void crearTropa(String tropa)
@@ -79,118 +95,7 @@ namespace ClashOfClans
 
         public void crearEdificio(String edificio)
         {
-            if (edificio == "Ayuntamiento")
-            {
-                if(Ayuntamiento == null)
-                {
-                    Ayuntamiento Ayuntamiento = new Ayuntamiento(this);
-                }
-            }
-            else if (edificio == "Castillo")
-            {
-                if(Castillo == null)
-                {
-                    Castillo Castillo = new Castillo(this);
-                }
-            }
-            else if (edificio == "Canon")
-            {
-                Canones.Add(new Canon(this));
-            }
-            else if (edificio == "Antiaereo")
-            {
-                Antiaereos.Add(new Antiaereo(this));
-            }
-            else if (edificio == "TorreMago")
-            {
-                TorresMago.Add(new TorreMago(this));
-
-            }
-            else if (edificio == "TorreArquera")
-            {
-                TorresArquera.Add(new TorreArquera(this));
-
-            }
-            else if (edificio == "TorreInfierno")
-            {
-                TorresInfierno.Add(new TorreInfierno(this));
-
-            }
-            else if (edificio == "Muro")
-            {
-                Muros.Add(new Muro(this));
-
-            }
-            else if (edificio == "Tesla")
-            {
-                Teslas.Add(new Tesla(this));
-
-            }
-            else if (edificio == "Aguila")
-            {
-                Aguilas.Add(new Aguila(this));
-
-            }
-            else if (edificio == "Ballesta")
-            {
-                Ballestas.Add(new Ballesta(this));
-
-            }
-            else if (edificio == "Cuartel")
-            {
-                Cuarteles.Add(new Cuartel(this));
-
-            }
-            else if (edificio == "CuartelOscuro")
-            {
-                CuartelesOscuro.Add(new CuartelOscuro(this));
-
-            }
-            else if (edificio == "Campamento")
-            {
-                if(Campamentos.Count < 4)
-                {
-                    Campamentos.Add(new Campamento(this));
-                }
-
-
-            }
-            else if (edificio == "AlmacenOro")
-            {
-                if(AlmacenesOro.Count < 4) { 
-                    AlmacenesOro.Add(new AlmacenOro(this));
-                }
-            }
-            else if (edificio == "AlmacenElixirRojo")
-            {
-                if(AlmacenesElixirRojo.Count < 4) {
-                    AlmacenesElixirRojo.Add(new AlmacenElixirRojo(this));
-                }
-            }
-            else if (edificio == "AlmacenElixirNegro")
-            {
-                if(AlmacenesElixirNegro.Count < 1) {
-                    AlmacenesElixirNegro.Add(new AlmacenElixirNegro(this));
-                }
-            }
-            else if (edificio == "RecolectoraOro")
-            {
-                if(RecolectorasOro.Count < 6) {
-                    RecolectorasOro.Add(new RecolectoraOro(this));
-                }
-            }
-            else if (edificio == "RecolectoraElixirRojo")
-            {
-                if(RecolectorasElixirRojo.Count < 6) {
-                    RecolectorasElixirRojo.Add(new RecolectoraElixirRojo(this));
-                }
-            }
-            else if (edificio == "RecolectoraElixirNegro")
-            {
-                if(RecolectorasElixirNegro.Count < 3) {
-                    RecolectorasElixirNegro.Add(new RecolectoraElixirNegro(this));
-                }
-            }
+           
         }
 
         public void crearWarden()

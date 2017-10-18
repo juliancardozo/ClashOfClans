@@ -19,6 +19,8 @@ namespace ClashOfClans
         public Aldea aldea { get; set; }
         public Int32 cantidadMaxima { get; set; }
 
+        public Int32 cantidadMaxima { get; set; }
+
 
         public Cuartel(Aldea aldea)
         {

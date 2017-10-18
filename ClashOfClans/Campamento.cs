@@ -18,6 +18,8 @@ namespace ClashOfClans
 
         public Int32 espacio { get; set; }
 
+        public Int32 cantidadMaxima { get; set; }
+
 
         public Campamento(Aldea Aldea)
         {
