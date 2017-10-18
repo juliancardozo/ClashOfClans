@@ -16,12 +16,12 @@ namespace ClashOfClans
 
         public Aldea aldea { get; set; }
 
-        public Int32 capacidad;
-      
+        public Int32 espacio { get; set; }
+
 
         public Campamento(Aldea Aldea)
         {
-            capacidad = 100;
+            espacio = 100;
             this.aldea = aldea;
             nombre = "Campamento";
             vida = 1000;

@@ -17,11 +17,22 @@ namespace ClashOfClans
         public int AlmacenElixirRojo { get => almacenElixirRojo; set => almacenElixirRojo = value; }
         public int AlmacenElixirNegro { get => almacenElixirNegro; set => almacenElixirNegro = value; }
 
-        List<IEdificio> Edificios;
-        readonly Ayuntamiento Ayuntamiento;
-        readonly Castillo Castillo;
+        List<IDefensivo> defensivos;
+        List<ITerrestre> terrestre;
+        List<IAntiaereo> antiaereo;
+        List<IProduccion> produccion;
+        readonly Ayuntamiento ayuntamiento;
+        readonly Castillo castillo;
+        List<Campamento> campamentos;
+        List<AlmacenOro> almacenesOro;
+        List<AlmacenElixirRojo> almacenesElixirRojo;
+        List<AlmacenElixirNegro> almacenesElixirNegro;
+        List<RecolectoraOro> recolectorasOro;
+        List<RecolectoraElixirRojo> recolectorasElixirRojo;
+        List<RecolectoraElixirNegro> recolectorasElixirNegro;
 
-        List<ITropa> Tropas;
+        List<ITropaNormal> tropasNormales;
+        List<ITropaOscura> tropasOscuras;
         readonly Warden Warden;
         readonly Rey Rey;
         readonly Reina Reina;
@@ -46,12 +57,17 @@ namespace ClashOfClans
         public void crearTropa(String tropa)
         {
             ITropa t = constructores[tropa].Instanciar();
+
             // Controlo espacios disponibles
             bool espacioDisponible = false;
             Int32 totalEspaciosDisponibles = 0;
-            foreach(IEdificio edificio in Edificios)
+            foreach(Campamento campamento in Campamentos)
             {
-
+                totalEspaciosDisponibles += campamento.espacio;
+            }
+            if(castillo != null)
+            {
+                totalEspaciosDisponibles += castillo.espacio;
             }
 
 

@@ -22,7 +22,6 @@ namespace ClashOfClans
         public Int32 almacenElixirRojo;
         public Int32 almacenElixirNegro;
         public Int32 espacio;
-        public List<ITropa> tropas;
         public String nombreCastillo;
                
         public Castillo(Aldea aldea)
@@ -31,7 +30,6 @@ namespace ClashOfClans
             almacenElixirRojo = 0;
             almacenElixirNegro = 0;
             espacio = 1000;
-            tropas = new List<ITropa>();
             nombreCastillo= "Castillo del Clan";
             this.aldea = aldea;
             nombre = "Castillo";
