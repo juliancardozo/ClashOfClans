@@ -21,8 +21,8 @@ namespace ClashOfClans
         List<ITerrestre> terrestre;
         List<IAntiaereo> antiaereo;
         List<IProduccion> produccion;
-        readonly Ayuntamiento ayuntamiento;
-        readonly Castillo castillo;
+        public readonly Ayuntamiento ayuntamiento;
+        public readonly Castillo castillo;
         List<Campamento> campamentos;
         List<AlmacenOro> almacenesOro;
         List<AlmacenElixirRojo> almacenesElixirRojo;
