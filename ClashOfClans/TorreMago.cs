@@ -18,6 +18,8 @@ namespace ClashOfClans
 
         public Aldea aldea { get; set; }
 
+        public Int32 cantidadMaxima { get; set; }
+
         public TorreMago(Aldea aldea)
         {
             this.aldea = aldea;

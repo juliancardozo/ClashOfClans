@@ -12,6 +12,7 @@ namespace ClashOfClans
         Int32 vida { get; }
 
         Int32 nivel { get;  }
+        Int32 cantidadMaxima { get; }
         Aldea aldea { get; set; }
 
 

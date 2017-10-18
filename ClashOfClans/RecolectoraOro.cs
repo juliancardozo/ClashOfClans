@@ -17,6 +17,7 @@ namespace ClashOfClans
         public Int32 dano { get; }
 
         public Aldea aldea { get; set; }
+        public Int32 cantidadMaxima { get; set; }
 
 
         public RecolectoraOro(Aldea aldea)

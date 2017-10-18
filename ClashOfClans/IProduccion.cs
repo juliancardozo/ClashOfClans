@@ -8,6 +8,6 @@ namespace ClashOfClans
 {
     interface IProduccion:IEdificio
     {
-
+        public Int32 cantidadMaxima { get; set; }
     }
 }

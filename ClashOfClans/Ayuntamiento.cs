@@ -17,7 +17,9 @@ namespace ClashOfClans
         public Aldea aldea { get; set; }
         public Int32 almacenOro;
         public Int32 almacenElixirRojo;
-     
+
+        public Int32 cantidadMaxima { get; set; }
+
 
         public Ayuntamiento(Aldea aldea)
         {

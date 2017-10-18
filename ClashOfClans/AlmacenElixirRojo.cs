@@ -23,7 +23,9 @@ namespace ClashOfClans
         public Int32 capacidadMaxima { get; set;}
      
         public Int32 capacidadDisponible { get; set;}
-        
+
+        public Int32 cantidadMaxima { get; set; }
+
 
 
         public AlmacenElixirRojo(Aldea aldea)

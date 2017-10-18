@@ -18,9 +18,10 @@ namespace ClashOfClans
             public Int32 dano { get; }
 
             public Aldea aldea { get; set; }
+        public Int32 cantidadMaxima { get; set; }
 
 
-            public CuartelOscuro(Aldea aldea)
+        public CuartelOscuro(Aldea aldea)
             {
                 this.aldea = aldea;
                 nombre = "Cuartel Oscuro";
