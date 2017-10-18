@@ -68,6 +68,34 @@ namespace ClashOfClans
             constructoresTropaOscuro.Add("Lava", new FactoryLava(this));
             constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca(this));
             constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco(this));
+
+            constructoresEdificiosAlmacen = new Dictionary<string, IFactoryAlmacen>;
+            constructoresEdificiosAlmacen.Add("AlmacenElixirNegro", new FactoryAlamcenElixirNegro());
+            constructoresEdificiosAlmacen.Add("AlmacenElixirRojo", new FactoryAlmacenElixirRojo());
+            constructoresEdificiosAlmacen.Add("AlmacenOro", new FactoryAlmacenOro());
+
+            constructoresEdificiosDefensivo = new Dictionary<string, IFactoryDefensivo>;
+            constructoresEdificiosDefensivo.Add("TorreArqueta", new FactoryTorreArquera());
+            constructoresEdificiosDefensivo.Add("Canones", new FactoryCanon());
+            constructoresEdificiosDefensivo.Add("TorreMago", new FactoryTorreMago());
+            constructoresEdificiosDefensivo.Add("Antiaereo", new FactoryAntiAereo());
+            constructoresEdificiosDefensivo.Add("Tesla", new FactoryTesla());
+            constructoresEdificiosDefensivo.Add("Ballesta", new FactoryBallesta());
+            constructoresEdificiosDefensivo.Add("TorreInfierno", new FactoryTorreInfierno());
+            constructoresEdificiosDefensivo.Add("Muro", new FactoryMuro());
+            constructoresEdificiosDefensivo.Add("Aguila", new FactoryAguila());
+
+            constructoresEdificiosProduccion = new Dictionary<string, IFactoryProduccion>;
+            constructoresEdificiosProduccion.Add("Cuartel", new FactoryCuartel());
+            constructoresEdificiosProduccion.Add("CuartelOscuro", new FactoryCuartelOscuro());
+
+            constructoresEdificiosRecolectora = new Dictionary<string, IFactoryRecolectora>;
+            constructoresEdificiosRecolectora.Add("RecolectoraElixirNegro", new FactoryRecolectoraElixirNegro());
+            constructoresEdificiosRecolectora.Add("RecolectoraElixirRojo", new FactoryRecolectoraElixirRojo());
+            constructoresEdificiosRecolectora.Add("RecolectoraOro", new FactoryRecolectoraOro());
+
+            
+
         }
 
         public void crearTropa(String tropa)
@@ -93,9 +121,50 @@ namespace ClashOfClans
 
         }
 
-        public void crearEdificio(String edificio)
+        public void crearEdificioAlmacen(String edificio)
         {
-           
+            IAlmacen t = constructores[tropa].Instanciar();
+
+            // Controlo espacios disponibles
+            bool espacioDisponible = false;
+            Int32 totalEspaciosDisponibles = 0;
+            foreach (Campamento campamento in Campamentos)
+            {
+                totalEspaciosDisponibles += campamento.espacio;
+            }
+            if (castillo != null)
+            {
+                totalEspaciosDisponibles += castillo.espacio;
+            }
+
+
+            // Controlo recursos disponibles
+            bool recursosDisponible = false;
+        }
+
+        public void crearEdificioDefensivo(String edificio)
+        {
+
+        }
+        public void crearEdificioProduccion(String edificio)
+        {
+
+        }
+        public void crearEdificioRecolectora(String edificio)
+        {
+
+        }
+        public void crearEdificioCampamento(String edificio)
+        {
+
+        }
+        public void crearEdificioCastillo(String edificio)
+        {
+
+        }
+        public void crearEdificioAyuntamiento(String edificio)
+        {
+
         }
 
         public void crearWarden()
