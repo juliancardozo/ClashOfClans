@@ -14,14 +14,16 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
-
+        public Int32 elixirRojo { get; }
+        
         public Gigante(Aldea aldea)
         {
             this.nombre = "Gigante";
             this.nivel = 1;
             this.velocidad = 10;
             this.dano = 9;
-            this.espacio = 1;
+            this.espacio = 5;
+            this.elixirRojo = 40;
         }
 
         public void Atacar()

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface INormal:ITropaNormal
+    interface INormal
     {
+        Int32 elixirRojo { get; }
     }
 }

@@ -14,6 +14,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirRojo { get; }
 
         public Mago(Aldea aldea)
         {
@@ -22,6 +23,7 @@ namespace ClashOfClans
             this.velocidad = 30;
             this.dano = 9;
             this.espacio = 1;
+            this.elixirRojo = 14;
         }
 
         public void Atacar()

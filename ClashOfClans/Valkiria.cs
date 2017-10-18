@@ -14,6 +14,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirNegro { get; }
 
 
         public Valkiria(Aldea aldea)
@@ -23,6 +24,7 @@ namespace ClashOfClans
             this.velocidad = 30;
             this.dano = 30;
             this.espacio = 1;
+            this.elixirNegro = 15;
         }
         public void Atacar()
         {

@@ -14,6 +14,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirNegro { get; }
 
         public Lava(Aldea aldea)
         {
@@ -21,7 +22,8 @@ namespace ClashOfClans
             this.nivel = 1;
             this.velocidad = 55;
             this.dano = 45;
-            this.espacio = 1;
+            this.espacio = 2;
+            this.elixirNegro = 20;
         }
 
         public void Atacar()

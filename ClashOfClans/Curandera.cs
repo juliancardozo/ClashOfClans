@@ -14,6 +14,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirRojo { get; }
 
         public Curandera(Aldea aldea)
         {
@@ -22,6 +23,7 @@ namespace ClashOfClans
             this.velocidad = 20;
             this.dano = 19;
             this.espacio = 1;
+            this.elixirRojo = 12;
         }
 
         public void Atacar()

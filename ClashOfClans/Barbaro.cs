@@ -15,6 +15,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirRojo { get; }
 
         public Barbaro(Aldea aldea) {
             this.nombre = "Barbaro";
@@ -22,6 +23,7 @@ namespace ClashOfClans
             this.velocidad = 50;
             this.dano = 8;
             this.espacio = 1;
+            this.elixirRojo = 5;
         }
 
         public void Atacar()
