@@ -8,6 +8,6 @@ namespace ClashOfClans
 {
     interface IRecolectora:IEdificio
     {
-        void recolectar();
+        Int32 Recolectar();
     }
 }

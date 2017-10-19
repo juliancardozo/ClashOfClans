@@ -34,6 +34,7 @@ namespace ClashOfClans
             nivel = 1;
             capacidadMaxima = 2500;
             capacidadDisponible = 2500;
+            cantidadMaxima = 1;
         }
 
         public void AlmacenarElixirNegro(Int32 elixirNegro)

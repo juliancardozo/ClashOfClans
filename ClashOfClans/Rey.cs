@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Rey:IHeroe
+    public class Rey:IHeroe
     {
         public Aldea aldea { get; }
         public String nombre { get; }

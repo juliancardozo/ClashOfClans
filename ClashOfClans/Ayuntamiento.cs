@@ -29,6 +29,7 @@ namespace ClashOfClans
             almacenOro = 0;
             vida = 1500;
             nivel = 0;
+            cantidadMaxima = 1;
 
         }
 

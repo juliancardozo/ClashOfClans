@@ -27,6 +27,7 @@ namespace ClashOfClans
                 nombre = "Cuartel Oscuro";
                 vida = 1000;
                 nivel = 1;
+            cantidadMaxima = 2;
 
             }
 

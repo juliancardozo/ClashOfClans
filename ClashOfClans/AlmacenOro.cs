@@ -27,6 +27,7 @@ namespace ClashOfClans
             nivel = 1;
             capacidadMaxima = 2500;
             capacidadDisponible = 0;
+            cantidadMaxima = 4;
         }
 
         public void AlmacenarOro(Int32 oro)

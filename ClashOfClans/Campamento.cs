@@ -28,16 +28,17 @@ namespace ClashOfClans
             nombre = "Campamento";
             vida = 1000;
             nivel = 1;
+            cantidadMaxima = 4;
         }
 
         public void IngresarTropa()
         {
-            capacidad -= 1;
+            espacio -= 1;
         }
 
         public void EliminarTropa()
         {
-            capacidad += 1;
+            espacio += 1;
         }
     }
 }

@@ -26,7 +26,7 @@ namespace ClashOfClans
             nombre = "Recolectora Oro";
             vida = 1000;
             nivel = 1;
-
+            cantidadMaxima = 6;
         }
 
         public Int32 Recolectar()

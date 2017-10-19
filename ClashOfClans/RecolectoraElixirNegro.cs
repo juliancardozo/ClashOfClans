@@ -26,7 +26,7 @@ namespace ClashOfClans
             nombre = "Recolectora Elixir Negro";
             vida = 1000;
             nivel = 1;
-            
+            cantidadMaxima = 3;
         }
         public RecolectoraElixirNegro() { }
 

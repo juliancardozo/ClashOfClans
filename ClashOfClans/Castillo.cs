@@ -39,7 +39,7 @@ namespace ClashOfClans
             almacenOro = 0;
             vida = 1500;
             nivel = 0;
-
+            cantidadMaxima = 1;
         }
         public void IngresarOro(Int32 oro)
         {

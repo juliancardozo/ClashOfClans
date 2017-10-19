@@ -17,6 +17,7 @@ namespace ClashOfClans
        
         public Int32 dano { get; }
         public Aldea aldea { get;set; }
+        public Int32 cantidadMaxima { get; set; }
 
         public Tesla(Aldea Aldea)
         {
@@ -25,6 +26,7 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             dano = 150;
+            cantidadMaxima = 0;
         }
 
         public void AtacarTerrestre()

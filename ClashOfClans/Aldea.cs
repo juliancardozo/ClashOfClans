@@ -16,7 +16,8 @@ namespace ClashOfClans
         public int AlmacenOro { get => almacenOro; set => almacenOro = value; }
         public int AlmacenElixirRojo { get => almacenElixirRojo; set => almacenElixirRojo = value; }
         public int AlmacenElixirNegro { get => almacenElixirNegro; set => almacenElixirNegro = value; }
-
+        List<IEdificio> Edificios;
+        List<ITropa> Tropas;
         List<IDefensivo> defensivos;
         List<ITerrestre> terrestre;
         List<IAntiaereo> antiaereo;
@@ -33,9 +34,9 @@ namespace ClashOfClans
 
         List<ITropaNormal> tropasNormales;
         List<ITropaOscura> tropasOscuras;
-        readonly Warden Warden;
-        readonly Rey Rey;
-        readonly Reina Reina;
+        Warden Warden { get; set; }
+        Rey Rey { get; set; }
+        Reina Reina { get; set; }
 
         Dictionary<String, IFactoryTropaNormal> constructores;
         Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
@@ -55,24 +56,24 @@ namespace ClashOfClans
             Tropas = new List<ITropa>();
 
             constructores = new Dictionary<string, IFactoryTropaNormal>();
-            constructores.Add("Arquera", new FactoryArquera(this));
-            constructores.Add("Barbaro", new FactoryBarbaro(this));
-            constructores.Add("Gigante", new FactoryGigante(this));
-            constructores.Add("Mago", new FactoryMago(this));
-            constructores.Add("Curandera", new FactoryCurandera(this));
-            constructores.Add("DragonBebe", new FactoryDragonBebe(this));
-            constructores.Add("Pekka", new FactoryPekka(this));
-            constructores.Add("Dragon", new FactoryDragon(this));
-            constructores.Add("Minero", new FactoryMinero(this));
-            constructores.Add("Globo", new FactoryGlobo(this));
-            constructores.Add("Duende", new FactoryDuende(this));
-            constructores.Add("Esqueleto", new FactoryEsqueleto(this));
+            constructores.Add("Arquera", new FactoryArquera());
+            constructores.Add("Barbaro", new FactoryBarbaro());
+            constructores.Add("Gigante", new FactoryGigante());
+            constructores.Add("Mago", new FactoryMago());
+            constructores.Add("Curandera", new FactoryCurandera());
+            constructores.Add("DragonBebe", new FactoryDragonBebe());
+            constructores.Add("Pekka", new FactoryPekka());
+            constructores.Add("Dragon", new FactoryDragon());
+            constructores.Add("Minero", new FactoryMinero());
+            constructores.Add("Globo", new FactoryGlobo());
+            constructores.Add("Duende", new FactoryDuende());
+            constructores.Add("Esqueleto", new FactoryEsqueleto());
 
             constructoresTropaOscuro = new Dictionary<string, IFactoryTropaOscura>();
-            constructoresTropaOscuro.Add("Esbirro", new FactoryEsbirro(this));
-            constructoresTropaOscuro.Add("Lava", new FactoryLava(this));
-            constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca(this));
-            constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco(this));
+            constructoresTropaOscuro.Add("Esbirro", new FactoryEsbirro());
+            constructoresTropaOscuro.Add("Lava", new FactoryLava());
+            constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca());
+            constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco());
 
             constructoresEdificiosAlmacen = new Dictionary<string, IFactoryAlmacen>();
             constructoresEdificiosAlmacen.Add("AlmacenElixirNegro", new FactoryAlamcenElixirNegro());
@@ -105,12 +106,12 @@ namespace ClashOfClans
 
         public void crearTropa(String tropa)
         {
-            ITropa t = constructores[tropa].Instanciar();
+            ITropa t = constructores[tropa].Instanciar(this);
 
             // Controlo espacios disponibles
             bool espacioDisponible = false;
             Int32 totalEspaciosDisponibles = 0;
-            foreach(Campamento campamento in Campamentos)
+            foreach(Campamento campamento in campamentos)
             {
                 totalEspaciosDisponibles += campamento.espacio;
             }
@@ -128,12 +129,12 @@ namespace ClashOfClans
 
         public void crearEdificioAlmacen(String edificio)
         {
-            IAlmacen t = constructores[tropa].Instanciar();
+            IAlmacen t = constructoresEdificiosAlmacen[edificio].Instanciar(this);
 
             // Controlo espacios disponibles
             bool espacioDisponible = false;
             Int32 totalEspaciosDisponibles = 0;
-            foreach (Campamento campamento in Campamentos)
+            foreach (Campamento  in campamentos)
             {
                 totalEspaciosDisponibles += campamento.espacio;
             }
@@ -176,7 +177,7 @@ namespace ClashOfClans
         {
             if(Warden == null)
             {
-                Warden = new Warden(this);
+                Warden = new Warden();
             }
         }
 
@@ -184,7 +185,7 @@ namespace ClashOfClans
         {
             if (Rey == null)
             {
-                Rey = new Rey(this);
+                Rey = new Rey();
             }
         }
 
@@ -192,7 +193,7 @@ namespace ClashOfClans
         {
             if (Reina == null)
             {
-                Reina = new Reina(this);
+                Reina = new Reina();
             }
         }
 

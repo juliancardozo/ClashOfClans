@@ -27,6 +27,7 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             dano = 150;
+            cantidadMaxima = 0;
         }
         public void AtacarTerrestre()
         {

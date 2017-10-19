@@ -22,6 +22,7 @@ namespace ClashOfClans
             nombre = "Cuartel";
             vida = 1000;
             nivel = 1;
+            cantidadMaxima = 4;
 
         }
 
