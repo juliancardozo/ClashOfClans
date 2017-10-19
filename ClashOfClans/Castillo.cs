@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Castillo:IEdificio
+    public class Castillo:IEdificio
     {
         public String nombre { get; }
 
@@ -17,6 +17,8 @@ namespace ClashOfClans
         public Int32 dano { get; }
 
         public Aldea aldea { get; set; }
+        public Int32 cantidadMaxima { get; set; }
+    
 
         public Int32 almacenOro;
         public Int32 almacenElixirRojo;

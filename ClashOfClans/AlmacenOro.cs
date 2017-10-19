@@ -10,15 +10,10 @@ namespace ClashOfClans
     {
 
         public String nombre { get; }
-
         public Int32 vida { get; }
-
         public Int32 nivel { get; }
-
         public Int32 dano { get; }
-
         public Aldea aldea { get; set; }
-
         public Int32 capacidadMaxima { get;set; }
         public Int32 capacidadDisponible { get;set; }
         public Int32 cantidadMaxima { get; set; }
@@ -31,17 +26,21 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             capacidadMaxima = 2500;
-            capacidadDisponible = 2500;
+            capacidadDisponible = 0;
         }
 
         public void AlmacenarOro(Int32 oro)
         {
-            capacidadDisponible -= oro;
+            capacidadDisponible += oro;
+            if(capacidadDisponible > capacidadMaxima)
+            {
+                capacidadDisponible = capacidadMaxima;
+            }
         }
 
         public void ExtraerOro(Int32 oro)
         {
-            capacidadDisponible += oro;
+            capacidadDisponible -= oro;
         }
     }
 }

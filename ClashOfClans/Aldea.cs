@@ -37,7 +37,12 @@ namespace ClashOfClans
         readonly Rey Rey;
         readonly Reina Reina;
 
-        Dictionary<String, IFactory> constructores;
+        Dictionary<String, IFactoryTropaNormal> constructores;
+        Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
+        Dictionary<String, IFactoryAlmacen> constructoresEdificiosAlmacen;
+        Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
+        Dictionary<String, IFactoryProduccion> constructoresEdificiosProduccion;
+        Dictionary<String, IFactoryRecolectora> constructoresEdificiosRecolectora;
 
         public Aldea()
         {
@@ -49,7 +54,7 @@ namespace ClashOfClans
             Edificios = new List<IEdificio>();
             Tropas = new List<ITropa>();
 
-            constructores = new Dictionary<string, IFactoryTropaNormal>;
+            constructores = new Dictionary<string, IFactoryTropaNormal>();
             constructores.Add("Arquera", new FactoryArquera(this));
             constructores.Add("Barbaro", new FactoryBarbaro(this));
             constructores.Add("Gigante", new FactoryGigante(this));
@@ -63,18 +68,18 @@ namespace ClashOfClans
             constructores.Add("Duende", new FactoryDuende(this));
             constructores.Add("Esqueleto", new FactoryEsqueleto(this));
 
-            constructoresTropaOscuro = new Dictionary<string, IFactoryTropaOscura>;
+            constructoresTropaOscuro = new Dictionary<string, IFactoryTropaOscura>();
             constructoresTropaOscuro.Add("Esbirro", new FactoryEsbirro(this));
             constructoresTropaOscuro.Add("Lava", new FactoryLava(this));
             constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca(this));
             constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco(this));
 
-            constructoresEdificiosAlmacen = new Dictionary<string, IFactoryAlmacen>;
+            constructoresEdificiosAlmacen = new Dictionary<string, IFactoryAlmacen>();
             constructoresEdificiosAlmacen.Add("AlmacenElixirNegro", new FactoryAlamcenElixirNegro());
             constructoresEdificiosAlmacen.Add("AlmacenElixirRojo", new FactoryAlmacenElixirRojo());
             constructoresEdificiosAlmacen.Add("AlmacenOro", new FactoryAlmacenOro());
 
-            constructoresEdificiosDefensivo = new Dictionary<string, IFactoryDefensivo>;
+            constructoresEdificiosDefensivo = new Dictionary<string, IFactoryDefensivo>();
             constructoresEdificiosDefensivo.Add("TorreArqueta", new FactoryTorreArquera());
             constructoresEdificiosDefensivo.Add("Canones", new FactoryCanon());
             constructoresEdificiosDefensivo.Add("TorreMago", new FactoryTorreMago());
@@ -85,11 +90,11 @@ namespace ClashOfClans
             constructoresEdificiosDefensivo.Add("Muro", new FactoryMuro());
             constructoresEdificiosDefensivo.Add("Aguila", new FactoryAguila());
 
-            constructoresEdificiosProduccion = new Dictionary<string, IFactoryProduccion>;
+            constructoresEdificiosProduccion = new Dictionary<string, IFactoryProduccion>();
             constructoresEdificiosProduccion.Add("Cuartel", new FactoryCuartel());
             constructoresEdificiosProduccion.Add("CuartelOscuro", new FactoryCuartelOscuro());
 
-            constructoresEdificiosRecolectora = new Dictionary<string, IFactoryRecolectora>;
+            constructoresEdificiosRecolectora = new Dictionary<string, IFactoryRecolectora>();
             constructoresEdificiosRecolectora.Add("RecolectoraElixirNegro", new FactoryRecolectoraElixirNegro());
             constructoresEdificiosRecolectora.Add("RecolectoraElixirRojo", new FactoryRecolectoraElixirRojo());
             constructoresEdificiosRecolectora.Add("RecolectoraOro", new FactoryRecolectoraOro());
