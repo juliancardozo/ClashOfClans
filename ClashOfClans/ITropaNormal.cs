@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface ITropaNormal:ITropa
+    interface ITropaNormal:ITropa,INormal
     {
-
     }
 }

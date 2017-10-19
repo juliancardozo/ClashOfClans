@@ -70,29 +70,6 @@ namespace ClashOfClans
             constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco(this));
         }
 
-        public void crearTropa(String tropa)
-        {
-            ITropa t = constructores[tropa].Instanciar();
-
-            // Controlo espacios disponibles
-            bool espacioDisponible = false;
-            Int32 totalEspaciosDisponibles = 0;
-            foreach(Campamento campamento in Campamentos)
-            {
-                totalEspaciosDisponibles += campamento.espacio;
-            }
-            if(castillo != null)
-            {
-                totalEspaciosDisponibles += castillo.espacio;
-            }
-
-
-            // Controlo recursos disponibles
-            bool recursosDisponible = false;
-
-
-        }
-
         public void crearEdificio(String edificio)
         {
            

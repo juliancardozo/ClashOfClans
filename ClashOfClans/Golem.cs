@@ -14,6 +14,7 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
+        public Int32 elixirRojo { get; }
 
 
         public Golem(Aldea aldea)
@@ -22,7 +23,8 @@ namespace ClashOfClans
             this.nivel = 1;
             this.velocidad = 45;
             this.dano = 30;
-            this.espacio = 1;
+            this.espacio = 10;
+            this.elixirRojo = 50;
         }
         public void Atacar()
         {

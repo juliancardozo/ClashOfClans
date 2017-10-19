@@ -9,5 +9,6 @@ namespace ClashOfClans
 {
     interface IOscura
     {
+        Int32 elixirNegro { get; }
     }
 }
