@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Cuartel : IProduccion
+    public class Cuartel : IProduccion
     {
         public String nombre { get; }
         public Int32 vida { get; }
@@ -27,7 +27,7 @@ namespace ClashOfClans
         }
 
         public void crearTropa(String tropa){
-            ITropaNormal t = aldea.constructores[tropa].Instanciar(aldea);
+            ITropaNormal t = aldea.constructoresTropaNormal[tropa].Instanciar(aldea);
 
             // Controlo espacios disponibles
             Int32 totalEspaciosDisponibles = 0;
@@ -41,6 +41,26 @@ namespace ClashOfClans
             }
             bool espacioDisponible = (totalEspaciosDisponibles >= t.espacio);
 
+
+
+
+            //
+            //
+            //
+            //
+            //
+            //
+            //   F A L T A    restar consumo de recursos, osea contar todas las tropas y edificios y restar al disponible
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+
             // Controlo recursos disponibles
             Int32 totalElixirRojoDisponibel = 0;
             if(aldea.ayuntamiento != null)
@@ -53,12 +73,10 @@ namespace ClashOfClans
             }
             bool recursosDisponibles = (totalElixirRojoDisponibel >= t.elixirRojo);
 
-            if(totalEspaciosDisponibles && recursosDisponibles)
+            if(espacioDisponible && recursosDisponibles)
             {
                 aldea.tropasNormales.Add(t);
             }
-
-
         }
     }
 }

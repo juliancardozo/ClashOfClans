@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class Campamento:IEdificio
+    public class Campamento :IEdificio
     {
         public String nombre { get; }
 

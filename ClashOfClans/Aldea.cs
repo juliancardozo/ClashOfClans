@@ -16,34 +16,31 @@ namespace ClashOfClans
         public int AlmacenOro { get => almacenOro; set => almacenOro = value; }
         public int AlmacenElixirRojo { get => almacenElixirRojo; set => almacenElixirRojo = value; }
         public int AlmacenElixirNegro { get => almacenElixirNegro; set => almacenElixirNegro = value; }
-        List<IEdificio> Edificios;
-        List<ITropa> Tropas;
-        List<IDefensivo> defensivos;
-        List<ITerrestre> terrestre;
-        List<IAntiaereo> antiaereo;
-        List<IProduccion> produccion;
-        public readonly Ayuntamiento ayuntamiento;
-        public readonly Castillo castillo;
-        List<Campamento> campamentos;
-        List<AlmacenOro> almacenesOro;
-        List<AlmacenElixirRojo> almacenesElixirRojo;
-        List<AlmacenElixirNegro> almacenesElixirNegro;
-        List<RecolectoraOro> recolectorasOro;
-        List<RecolectoraElixirRojo> recolectorasElixirRojo;
-        List<RecolectoraElixirNegro> recolectorasElixirNegro;
 
-        List<ITropaNormal> tropasNormales;
-        List<ITropaOscura> tropasOscuras;
-        Warden Warden { get; set; }
-        Rey Rey { get; set; }
-        Reina Reina { get; set; }
+        public List<IDefensivo> defensivos; // pronto
+        public List<ITerrestre> terrestres; // pronto
+        public List<IAntiaereo> antiaereos; // pronto
+        public List<Cuartel> cuartelesNormal; // pronto
+        public List<CuartelOscuro> cuartelesOscuro; // pronto
+        public readonly Ayuntamiento ayuntamiento; // pronto
+        public readonly Castillo castillo; // pronto
+        public List<Campamento> campamentos; // pronto
+        public List<AlmacenOro> almacenesOro; // pronto
+        public List<AlmacenElixirRojo> almacenesElixirRojo; // pronto
+        public List<AlmacenElixirNegro> almacenesElixirNegro; // pronto
+        public List<RecolectoraOro> recolectorasOro; // pronto
+        public List<RecolectoraElixirRojo> recolectorasElixirRojo; // pronto
+        public List<RecolectoraElixirNegro> recolectorasElixirNegro; // pronto
 
-        Dictionary<String, IFactoryTropaNormal> constructores;
-        Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
-        Dictionary<String, IFactoryAlmacen> constructoresEdificiosAlmacen;
-        Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
-        Dictionary<String, IFactoryProduccion> constructoresEdificiosProduccion;
-        Dictionary<String, IFactoryRecolectora> constructoresEdificiosRecolectora;
+        public List<ITropaNormal> tropasNormales;
+        public List<ITropaOscura> tropasOscuras;
+        public Warden Warden { get; set; } // pronto
+        public Rey Rey { get; set; } // pronto
+        public Reina Reina { get; set; } // pronto
+
+        public Dictionary<String, IFactoryTropaNormal> constructoresTropaNormal;
+        public Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
+        public Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
 
         public Aldea()
         {
@@ -52,33 +49,34 @@ namespace ClashOfClans
             almacenElixirRojo = 800;
             almacenElixirNegro = 500;
 
-            Edificios = new List<IEdificio>();
-            Tropas = new List<ITropa>();
+            this.ayuntamiento = new Ayuntamiento(this);
+            this.castillo = new Castillo(this);
 
-            constructores = new Dictionary<string, IFactoryTropaNormal>();
-            constructores.Add("Arquera", new FactoryArquera());
-            constructores.Add("Barbaro", new FactoryBarbaro());
-            constructores.Add("Gigante", new FactoryGigante());
-            constructores.Add("Mago", new FactoryMago());
-            constructores.Add("Curandera", new FactoryCurandera());
-            constructores.Add("DragonBebe", new FactoryDragonBebe());
-            constructores.Add("Pekka", new FactoryPekka());
-            constructores.Add("Dragon", new FactoryDragon());
-            constructores.Add("Minero", new FactoryMinero());
-            constructores.Add("Globo", new FactoryGlobo());
-            constructores.Add("Duende", new FactoryDuende());
-            constructores.Add("Esqueleto", new FactoryEsqueleto());
+            defensivos = new List<IDefensivo>();
+            terrestres = new List<ITerrestre>();
+            antiaereos = new List<IAntiaereo>();
+            cuartelesNormal = new List<Cuartel>();
+            cuartelesOscuro = new List<CuartelOscuro>();
+
+            constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
+            constructoresTropaNormal.Add("Arquera", new FactoryArquera());
+            constructoresTropaNormal.Add("Barbaro", new FactoryBarbaro());
+            constructoresTropaNormal.Add("Gigante", new FactoryGigante());
+            constructoresTropaNormal.Add("Mago", new FactoryMago());
+            constructoresTropaNormal.Add("Curandera", new FactoryCurandera());
+            constructoresTropaNormal.Add("DragonBebe", new FactoryDragonBebe());
+            constructoresTropaNormal.Add("Pekka", new FactoryPekka());
+            constructoresTropaNormal.Add("Dragon", new FactoryDragon());
+            constructoresTropaNormal.Add("Minero", new FactoryMinero());
+            constructoresTropaNormal.Add("Globo", new FactoryGlobo());
+            constructoresTropaNormal.Add("Duende", new FactoryDuende());
+            constructoresTropaNormal.Add("Esqueleto", new FactoryEsqueleto());
 
             constructoresTropaOscuro = new Dictionary<string, IFactoryTropaOscura>();
             constructoresTropaOscuro.Add("Esbirro", new FactoryEsbirro());
             constructoresTropaOscuro.Add("Lava", new FactoryLava());
             constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca());
             constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco());
-
-            constructoresEdificiosAlmacen = new Dictionary<string, IFactoryAlmacen>();
-            constructoresEdificiosAlmacen.Add("AlmacenElixirNegro", new FactoryAlamcenElixirNegro());
-            constructoresEdificiosAlmacen.Add("AlmacenElixirRojo", new FactoryAlmacenElixirRojo());
-            constructoresEdificiosAlmacen.Add("AlmacenOro", new FactoryAlmacenOro());
 
             constructoresEdificiosDefensivo = new Dictionary<string, IFactoryDefensivo>();
             constructoresEdificiosDefensivo.Add("TorreArqueta", new FactoryTorreArquera());
@@ -91,93 +89,142 @@ namespace ClashOfClans
             constructoresEdificiosDefensivo.Add("Muro", new FactoryMuro());
             constructoresEdificiosDefensivo.Add("Aguila", new FactoryAguila());
 
-            constructoresEdificiosProduccion = new Dictionary<string, IFactoryProduccion>();
-            constructoresEdificiosProduccion.Add("Cuartel", new FactoryCuartel());
-            constructoresEdificiosProduccion.Add("CuartelOscuro", new FactoryCuartelOscuro());
-
-            constructoresEdificiosRecolectora = new Dictionary<string, IFactoryRecolectora>();
-            constructoresEdificiosRecolectora.Add("RecolectoraElixirNegro", new FactoryRecolectoraElixirNegro());
-            constructoresEdificiosRecolectora.Add("RecolectoraElixirRojo", new FactoryRecolectoraElixirRojo());
-            constructoresEdificiosRecolectora.Add("RecolectoraOro", new FactoryRecolectoraOro());
-
-            
-
         }
 
-        public void crearTropa(String tropa)
-        {
-            ITropa t = constructores[tropa].Instanciar(this);
 
-            // Controlo espacios disponibles
-            bool espacioDisponible = false;
-            Int32 totalEspaciosDisponibles = 0;
-            foreach(Campamento campamento in campamentos)
+        public void crearEdificioDefensivo(String edificioNombre)
+        {
+            IDefensivo edificio = constructoresEdificiosDefensivo[edificioNombre].Instanciar(this);
+            Int32 cantidad = 0;
+            foreach (IDefensivo e in defensivos)
             {
-                totalEspaciosDisponibles += campamento.espacio;
-            }
-            if(castillo != null)
-            {
-                totalEspaciosDisponibles += castillo.espacio;
+                if (e.nombre == edificio.nombre)
+                {
+                    cantidad++;
+                }
             }
 
-
-            // Controlo recursos disponibles
-            bool recursosDisponible = false;
-
-
-        }
-
-        public void crearEdificioAlmacen(String edificio)
-        {
-            IAlmacen t = constructoresEdificiosAlmacen[edificio].Instanciar(this);
-
-            // Controlo espacios disponibles
-            bool espacioDisponible = false;
-            Int32 totalEspaciosDisponibles = 0;
-            foreach (Campamento  in campamentos)
+            if (cantidad < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
             {
-                totalEspaciosDisponibles += campamento.espacio;
+                this.defensivos.Add(edificio);
             }
-            if (castillo != null)
+        }
+
+        public void crearEdificioTerrestre()
+        {
+            ITerrestre edificio = new Canon(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.terrestres.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
             {
-                totalEspaciosDisponibles += castillo.espacio;
+                this.terrestres.Add(edificio);
             }
-
-
-            // Controlo recursos disponibles
-            bool recursosDisponible = false;
         }
 
-        public void crearEdificioDefensivo(String edificio)
+        public void crearEdificioAntiAereo()
         {
-
+            IAntiaereo edificio = new Antiaereo(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.antiaereos.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
+            {
+                this.antiaereos.Add(edificio);
+            }
         }
-        public void crearEdificioProduccion(String edificio)
-        {
 
+        public void crearEdificioCuartelNormal()
+        {
+            Cuartel cuartel = new Cuartel(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.cuartelesNormal.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
+            {
+                this.cuartelesNormal.Add(cuartel);
+            }
         }
-        public void crearEdificioRecolectora(String edificio)
-        {
 
+        public void crearEdificioCuartelOscuro()
+        {
+            CuartelOscuro cuartel = new CuartelOscuro(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.cuartelesOscuro.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
+            {
+                this.cuartelesOscuro.Add(cuartel);
+            }
         }
-        public void crearEdificioCampamento(String edificio)
-        {
 
+        public void crearEdificioCampamento()
+        {
+            Campamento campamento = new Campamento(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.campamentos.Count < campamento.cantidadMaxima || campamento.cantidadMaxima != 0)
+            {
+                this.campamentos.Add(campamento);
+            }
         }
-        public void crearEdificioCastillo(String edificio)
-        {
 
+        public void crearEdificioAlmacenOro()
+        {
+            AlmacenOro almacen = new AlmacenOro(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.almacenesOro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            {
+                this.almacenesOro.Add(almacen);
+            }
         }
-        public void crearEdificioAyuntamiento(String edificio)
-        {
 
+        public void crearEdificioElixirRojo()
+        {
+            AlmacenElixirRojo almacen = new AlmacenElixirRojo(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.almacenesElixirRojo.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            {
+                this.almacenesElixirRojo.Add(almacen);
+            }
+        }
+
+        public void crearEdificioElixirNegro()
+        {
+            AlmacenElixirNegro almacen = new AlmacenElixirNegro(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.almacenesElixirNegro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            {
+                this.almacenesElixirNegro.Add(almacen);
+            }
+        }
+
+        public void crearEdificioRecolectoraOro()
+        {
+            RecolectoraOro recolectora = new RecolectoraOro(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.recolectorasOro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            {
+                this.recolectorasOro.Add(recolectora);
+            }
+        }
+
+        public void crearEdificioRecolectoraElixirRojo()
+        {
+            RecolectoraElixirRojo recolectora = new RecolectoraElixirRojo(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.recolectorasElixirRojo.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            {
+                this.recolectorasElixirRojo.Add(recolectora);
+            }
+        }
+
+        public void crearEdificioRecolectoraElixirNegro()
+        {
+            RecolectoraElixirNegro recolectora = new RecolectoraElixirNegro(this);
+            // Controlo la cantidad maxima de edificios de este tipo
+            if (this.recolectorasElixirNegro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            {
+                this.recolectorasElixirNegro.Add(recolectora);
+            }
         }
 
         public void crearWarden()
         {
             if(Warden == null)
             {
-                Warden = new Warden();
+                Warden = new Warden(this);
             }
         }
 
@@ -185,7 +232,7 @@ namespace ClashOfClans
         {
             if (Rey == null)
             {
-                Rey = new Rey();
+                Rey = new Rey(this);
             }
         }
 
@@ -193,7 +240,7 @@ namespace ClashOfClans
         {
             if (Reina == null)
             {
-                Reina = new Reina();
+                Reina = new Reina(this);
             }
         }
 

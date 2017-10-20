@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IFactoryAlmacen
+    public interface IFactoryAlmacen
     {
         IAlmacen Instanciar(Aldea aldea);
     }

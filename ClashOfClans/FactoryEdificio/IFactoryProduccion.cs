@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IFactoryProduccion
+    public interface IFactoryProduccion
     {
         IProduccion Instanciar(Aldea aldea);
     }

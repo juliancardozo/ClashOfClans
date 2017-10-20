@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface ITerrestre: IDefensivo
+    public interface ITerrestre : IDefensivo
     {
 
     }

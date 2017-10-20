@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class RecolectoraOro:IRecolectora
+    public class RecolectoraOro :IRecolectora
     {
         public String nombre { get; }
 

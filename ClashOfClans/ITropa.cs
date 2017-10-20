@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface ITropa
+    public interface ITropa
     {
         String nombre { get; }
         Int32 nivel { get; }

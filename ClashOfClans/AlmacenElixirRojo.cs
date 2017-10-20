@@ -6,27 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class AlmacenElixirRojo:IAlmacen
+    public class AlmacenElixirRojo :IAlmacen
     {
-
-
         public String nombre { get; }
-
         public Int32 vida { get; }
-
         public Int32 nivel { get; }
-
         public Int32 dano { get; }
-
         public Aldea aldea { get; set; }
-
         public Int32 capacidadMaxima { get; set;}
-     
         public Int32 capacidadDisponible { get; set;}
-
         public Int32 cantidadMaxima { get; set; }
-
-
 
         public AlmacenElixirRojo(Aldea aldea)
         {
@@ -35,17 +24,21 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             capacidadMaxima = 2500;
-            capacidadDisponible = 2500;
+            capacidadDisponible = 0;
             cantidadMaxima = 4;
         }
         public void AlmacenarElixirRojo(Int32 elixirRojo)
         {
-            capacidadDisponible -= elixirRojo;
+            capacidadDisponible += elixirRojo;
+            if(capacidadDisponible > capacidadMaxima)
+            {
+                capacidadDisponible = capacidadMaxima;
+            }
         }
 
         public void ExtraerElixirRojo(Int32 elixirRojo)
         {
-            capacidadDisponible += elixirRojo;
+            capacidadDisponible -= elixirRojo;
         }
     }
 }

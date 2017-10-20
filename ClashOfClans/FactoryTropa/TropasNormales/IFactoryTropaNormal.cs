@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IFactoryTropaNormal
+    public interface IFactoryTropaNormal
     {
        ITropaNormal Instanciar(Aldea aldea);
     }

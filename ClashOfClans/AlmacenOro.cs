@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class AlmacenOro:IAlmacen
+    public class AlmacenOro :IAlmacen
     {
 
         public String nombre { get; }

@@ -15,8 +15,9 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Int32 espacio { get; }
 
-        public Warden()
+        public Warden(Aldea aldea)
         {
+            this.aldea = aldea;
             this.nombre = "Warden";
             this.nivel = 1;
             this.velocidad = 50;

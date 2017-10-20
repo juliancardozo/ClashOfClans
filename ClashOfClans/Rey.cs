@@ -14,8 +14,10 @@ namespace ClashOfClans
         public Int32 velocidad { get; }
         public Int32 dano { get; }
         public Int32 espacio { get; }
-        public Rey()
+
+        public Rey(Aldea aldea)
         {
+            this.aldea = aldea;
             this.nombre = "Rey";
             this.nivel = 1;
             this.velocidad = 50;
