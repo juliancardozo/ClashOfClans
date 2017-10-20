@@ -29,7 +29,7 @@ namespace ClashOfClans
         /// Si cumplo todos los recuros y espacios necesarios devuelvo true, sino false
         /// </summary>
 
-        public void crearTropaOscura(String tropa)
+        public bool crearTropaOscura(String tropa)
         {
             ITropaOscura t = aldea.constructoresTropaOscuro[tropa].Instanciar(aldea);
 
