@@ -14,7 +14,7 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Aldea aldea { get; set; }
         public Int32 capacidadMaxima { get; set;}
-        public Int32 capacidadDisponible { get; set;}
+        public Int32 disponible { get; set;}
         public Int32 cantidadMaxima { get; set; }
 
         public AlmacenElixirRojo(Aldea aldea)
@@ -24,21 +24,25 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             capacidadMaxima = 2500;
-            capacidadDisponible = 0;
+            disponible = 0;
             cantidadMaxima = 4;
         }
-        public void AlmacenarElixirRojo(Int32 elixirRojo)
+        public Int32 AlmacenarElixirRojo(Int32 elixirRojo)
         {
-            capacidadDisponible += elixirRojo;
-            if(capacidadDisponible > capacidadMaxima)
+            Int32 disponibleAntes = disponible;
+            disponible += elixirRojo;
+            if(disponible > capacidadMaxima)
             {
-                capacidadDisponible = capacidadMaxima;
+                disponible = capacidadMaxima;
             }
+
+            // Devuelvo lo almacenado
+            return (disponible - disponibleAntes);
         }
 
         public void ExtraerElixirRojo(Int32 elixirRojo)
         {
-            capacidadDisponible -= elixirRojo;
+            disponible -= elixirRojo;
         }
     }
 }

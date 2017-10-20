@@ -15,7 +15,7 @@ namespace ClashOfClans
         public Int32 dano { get; }
         public Aldea aldea { get; set; }
         public Int32 capacidadMaxima { get;set; }
-        public Int32 capacidadDisponible { get;set; }
+        public Int32 disponible { get;set; }
         public Int32 cantidadMaxima { get; set; }
 
 
@@ -26,22 +26,25 @@ namespace ClashOfClans
             vida = 1000;
             nivel = 1;
             capacidadMaxima = 2500;
-            capacidadDisponible = 0;
+            disponible = 0;
             cantidadMaxima = 4;
         }
 
-        public void AlmacenarOro(Int32 oro)
+        public Int32 AlmacenarOro(Int32 oro)
         {
-            capacidadDisponible += oro;
-            if(capacidadDisponible > capacidadMaxima)
+            Int32 cantidadAntes = disponible;
+            disponible += oro;
+            if(disponible > capacidadMaxima)
             {
-                capacidadDisponible = capacidadMaxima;
+                disponible = capacidadMaxima;
             }
+
+            return (disponible - cantidadAntes);
         }
 
         public void ExtraerOro(Int32 oro)
         {
-            capacidadDisponible -= oro;
+            disponible -= oro;
         }
     }
 }
