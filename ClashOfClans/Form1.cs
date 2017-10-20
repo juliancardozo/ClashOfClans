@@ -278,18 +278,20 @@ namespace ClashOfClans
 
         private void cuartelOscuroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioCuartelOscuro();
-            String[] nuevo = { "CuartelOscuro" };
-            var nuevoCuartelAgregar = new ListViewItem(nuevo);
-            listCuartelesOscuros.Items.Add(nuevoCuartelAgregar);
+            if (miAldea.crearEdificioCuartelOscuro()) { 
+                String[] nuevo = { "CuartelOscuro" };
+                var nuevoCuartelAgregar = new ListViewItem(nuevo);
+                listCuartelesOscuros.Items.Add(nuevoCuartelAgregar);
+            }
         }
 
         private void almacenDeOroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioAlmacenOro();
-            String[] nuevoCuartel = { "AlmacenOro" };
-            var nuevoCuartelAgregar = new ListViewItem(nuevoCuartel);
-            listView6.Items.Add(nuevoCuartelAgregar);
+            if (miAldea.crearEdificioAlmacenOro()) { 
+                String[] nuevoCuartel = { "AlmacenOro" };
+                var nuevoCuartelAgregar = new ListViewItem(nuevoCuartel);
+                listView6.Items.Add(nuevoCuartelAgregar);
+            }
         }
 
         private void almacenDeElixirRojoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -304,10 +306,11 @@ namespace ClashOfClans
 
         private void almacenDeElixirNegroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioElixirNegro();
-            String[] nuevoCuartel = { "AlmacenEN" };
-            var nuevoCuartelAgregar = new ListViewItem(nuevoCuartel);
-            listView4.Items.Add(nuevoCuartelAgregar);
+            if (miAldea.crearEdificioElixirNegro()) { 
+                String[] nuevoCuartel = { "AlmacenEN" };
+                var nuevoCuartelAgregar = new ListViewItem(nuevoCuartel);
+                listView4.Items.Add(nuevoCuartelAgregar);
+            }
         }
 
         private void recolectarOroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -351,58 +354,66 @@ namespace ClashOfClans
 
         private void campamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioCampamento();
-            String[] nuevo = { "Campamento" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listCampamentos.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioCampamento()) { 
+                String[] nuevo = { "Campamento" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listCampamentos.Items.Add(nuevoAgregar);
+            }
         }
 
         private void terrestresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioTerrestre();
-            String[] nuevo = { "Campamento" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listTerrestres.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioTerrestre()) { 
+                String[] nuevo = { "Campamento" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listTerrestres.Items.Add(nuevoAgregar);
+            }
         }
 
         private void torreMagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("TorreMago");
-            String[] nuevo = { "TorreMago" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioTerrestre())
+            {
+                String[] nuevo = { "TorreMago" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void torreArqueraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("TorreArquera");
-            String[] nuevo = { "TorreArquera" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioDefensivo("TorreArquera")) { 
+                String[] nuevo = { "TorreArquera" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void torreInfiernoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("TorreInfierno");
-            String[] nuevo = { "TorreInfierno" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioDefensivo("TorreInfierno")) { 
+                String[] nuevo = { "TorreInfierno" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void muroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("Muro");
-            String[] nuevo = { "Muro" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioDefensivo("Muro")) { 
+                String[] nuevo = { "Muro" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void teslaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("Tesla");
-            String[] nuevo = { "Tesla" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+           if (miAldea.crearEdificioDefensivo("Tesla")) { 
+                String[] nuevo = { "Tesla" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void águilaToolStripMenuItem_Click(object sender, EventArgs e)
