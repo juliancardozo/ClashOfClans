@@ -66,16 +66,16 @@ namespace ClashOfClans
         private void crearAldeaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             miAldea = new Aldea("Nombre de la Aldea");
-            int oro = miAldea.OroDisponible();
+            int oro = 0;
             this.oroAldea.Text = oro.ToString();
-            
-            int espacioLibre = miAldea.EspaciosDisponibles();
+
+            int espacioLibre = 0; ;
             this.espacioLibreAldea.Text = espacioLibre.ToString();
 
-            int elixirRojo = miAldea.ElixirRojoDisponible();
+            int elixirRojo = 0;
             this.elixirRojoAldea.Text = elixirRojo.ToString();
 
-            int elixirNegro = miAldea.ElixirNegroDisponible();
+            int elixirNegro = 0;
             this.elixirNegroAldea.Text = elixirNegro.ToString();
 
         }
@@ -90,11 +90,23 @@ namespace ClashOfClans
 
         private void arqueraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (miAldea.cuartelesNormal != null)
+            if (miAldea.cuartelesNormal != null &&  miAldea.cuartelesNormal.Count > 0)
             {
-                //TODO
-                //Esto está mal pero no se como resolverlo rápido.
-                miAldea.cuartelesNormal[0].crearTropa("Arquera");
+               
+                if (miAldea.campamentos != null){
+                    MessageBox.Show("No tiene campamentos en esta aldea.");
+                }
+                else
+                {
+                 //TODO
+                 //Esto está mal pero no se como resolverlo rápido.
+                    miAldea.cuartelesNormal[0].crearTropa("Arquera");
+                }
+
+                
+            } else
+            {
+                MessageBox.Show("No tiene cuarteles en esta aldea.");
             }
         }
 
