@@ -26,13 +26,19 @@ namespace ClashOfClans
 
         }
 
-        public void crearTropa(String tropa){
+        /// <summary>
+        /// Si cumplo todos los recuros y espacios necesarios devuelvo true, sino false
+        /// </summary>
+
+        public bool crearTropa(String tropa){
             ITropaNormal t = aldea.constructoresTropaNormal[tropa].Instanciar(aldea);
 
             if (aldea.EspaciosDisponibles() >= t.espacio && aldea.ElixirRojoDisponible() >= t.elixirRojo)
             {
                 aldea.tropasNormales.Add(t);
+                return true;
             }
+            return false;
         }
     }
 }
