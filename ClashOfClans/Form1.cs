@@ -77,22 +77,24 @@ namespace ClashOfClans
 
         private void cuartelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioCuartelNormal();
-            String[] nuevo = { "Cuartel"};
-            var nuevoCuartelAgregar = new ListViewItem(nuevo);
-            listCuarteles.Items.Add(nuevoCuartelAgregar);
+            if (miAldea.crearEdificioCuartelNormal())
+            {
+                String[] nuevo = { "Cuartel"};
+                var nuevoCuartelAgregar = new ListViewItem(nuevo);
+                listCuarteles.Items.Add(nuevoCuartelAgregar);
+            }
         }
 
         private void arqueraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Arquera");
-
-                String[] nuevoItem = { "Arquera" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Arquera")) { 
+                    String[] nuevoItem = { "Arquera" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -104,11 +106,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Barbaro");
-                String[] nuevoItem = { "Barbaro" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Barbaro"))
+                {
+                    String[] nuevoItem = { "Barbaro" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -120,11 +124,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Curandera");
-                String[] nuevoItem = { "Curandera" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Curandera"))
+                {
+                    String[] nuevoItem = { "Curandera" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -136,11 +142,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Dragon");
-                String[] nuevoItem = { "Dragon" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Dragon"))
+                {
+                    String[] nuevoItem = { "Dragon" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -152,11 +160,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("DragonBebe");
-                String[] nuevoItem = { "DragonBebe" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("DragonBebe"))
+                {
+                    String[] nuevoItem = { "DragonBebe" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -168,11 +178,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Duende");
-                String[] nuevoItem = { "Duende" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Duende"))
+                {
+                    String[] nuevoItem = { "Duende" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -184,11 +196,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Esqueleto");
-                String[] nuevoItem = { "Esqueleto" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Esqueleto"))
+                {
+                    String[] nuevoItem = { "Esqueleto" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -200,11 +214,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Gigante");
-                String[] nuevoItem = { "Gigante" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Gigante"))
+                {
+                    String[] nuevoItem = { "Gigante" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -216,11 +232,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Globo");
-                String[] nuevoItem = { "Globo" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Globo"))
+                {
+                    String[] nuevoItem = { "Globo" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -232,11 +250,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Minero");
-                String[] nuevoItem = { "Minero" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Minero"))
+                {
+                    String[] nuevoItem = { "Minero" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -248,11 +268,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Mago");
-                String[] nuevoItem = { "Mago" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Mago"))
+                {
+                    String[] nuevoItem = { "Mago" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -264,11 +286,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesNormal.Count > 0)
             {
-                miAldea.cuartelesNormal[0].crearTropa("Pekka");
-                String[] nuevoItem = { "Pekka" };
-                var nuevo = new ListViewItem(nuevoItem);
-                listTropasNormales.Items.Add(nuevo);
-                ActualizarRecursos();
+                if (miAldea.cuartelesNormal[0].crearTropa("Pekka"))
+                {
+                    String[] nuevoItem = { "Pekka" };
+                    var nuevo = new ListViewItem(nuevoItem);
+                    listTropasNormales.Items.Add(nuevo);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -586,6 +610,24 @@ namespace ClashOfClans
             {
                 MessageBox.Show("No tiene cuarteles oscuros en esta aldea.");
             }
+        }
+
+        private void wardenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            miAldea.crearWarden();
+            checkWarden.Checked = true;
+        }
+
+        private void reyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            miAldea.crearRey();
+            checkRey.Checked = true;
+        }
+
+        private void reinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            miAldea.crearReina();
+            checkReina.Checked = true;
         }
     }
 }

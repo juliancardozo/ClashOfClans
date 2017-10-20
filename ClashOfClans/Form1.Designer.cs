@@ -88,9 +88,9 @@
             this.lblTropasNormales = new System.Windows.Forms.Label();
             this.listTropaOscura = new System.Windows.Forms.ListView();
             this.lblTropasOscuras = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkRey = new System.Windows.Forms.CheckBox();
+            this.checkReina = new System.Windows.Forms.CheckBox();
+            this.checkWarden = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -112,10 +112,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listCampamentos = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
-            this.listView8 = new System.Windows.Forms.ListView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.listView9 = new System.Windows.Forms.ListView();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblTropas = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblElixirRojo = new System.Windows.Forms.Label();
@@ -131,6 +127,12 @@
             this.listCuartelesOscuros = new System.Windows.Forms.ListView();
             this.lblCuartelesOscuros = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkCastillo = new System.Windows.Forms.CheckBox();
+            this.checkAyuntamiento = new System.Windows.Forms.CheckBox();
+            this.héroesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -139,7 +141,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tropasToolStripMenuItem,
-            this.edificiosToolStripMenuItem});
+            this.edificiosToolStripMenuItem,
+            this.héroesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(953, 24);
@@ -612,39 +615,39 @@
             this.lblTropasOscuras.TabIndex = 5;
             this.lblTropasOscuras.Text = "Tropas Oscuras";
             // 
-            // checkBox1
+            // checkRey
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(22, 57);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(45, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Rey";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkRey.AutoSize = true;
+            this.checkRey.Enabled = false;
+            this.checkRey.Location = new System.Drawing.Point(22, 57);
+            this.checkRey.Name = "checkRey";
+            this.checkRey.Size = new System.Drawing.Size(45, 17);
+            this.checkRey.TabIndex = 6;
+            this.checkRey.Text = "Rey";
+            this.checkRey.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkReina
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Location = new System.Drawing.Point(22, 92);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(54, 17);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Reina";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkReina.AutoSize = true;
+            this.checkReina.Enabled = false;
+            this.checkReina.Location = new System.Drawing.Point(22, 92);
+            this.checkReina.Name = "checkReina";
+            this.checkReina.Size = new System.Drawing.Size(54, 17);
+            this.checkReina.TabIndex = 7;
+            this.checkReina.Text = "Reina";
+            this.checkReina.UseVisualStyleBackColor = true;
+            this.checkReina.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox3
+            // checkWarden
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Location = new System.Drawing.Point(22, 124);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(64, 17);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.Text = "Warden";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkWarden.AutoSize = true;
+            this.checkWarden.Enabled = false;
+            this.checkWarden.Location = new System.Drawing.Point(22, 124);
+            this.checkWarden.Name = "checkWarden";
+            this.checkWarden.Size = new System.Drawing.Size(64, 17);
+            this.checkWarden.TabIndex = 8;
+            this.checkWarden.Text = "Warden";
+            this.checkWarden.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -833,42 +836,6 @@
             this.label7.TabIndex = 32;
             this.label7.Text = "Campamentos";
             // 
-            // listView8
-            // 
-            this.listView8.Location = new System.Drawing.Point(132, 329);
-            this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(119, 134);
-            this.listView8.TabIndex = 31;
-            this.listView8.UseCompatibleStateImageBehavior = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(170, 309);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Castillo";
-            // 
-            // listView9
-            // 
-            this.listView9.Location = new System.Drawing.Point(15, 329);
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(110, 134);
-            this.listView9.TabIndex = 29;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 309);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Ayuntamiento";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // lblTropas
             // 
             this.lblTropas.AutoSize = true;
@@ -1001,11 +968,70 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Héroes";
             // 
+            // checkCastillo
+            // 
+            this.checkCastillo.AutoSize = true;
+            this.checkCastillo.Checked = true;
+            this.checkCastillo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkCastillo.Enabled = false;
+            this.checkCastillo.Location = new System.Drawing.Point(22, 377);
+            this.checkCastillo.Name = "checkCastillo";
+            this.checkCastillo.Size = new System.Drawing.Size(59, 17);
+            this.checkCastillo.TabIndex = 42;
+            this.checkCastillo.Text = "Castillo";
+            this.checkCastillo.UseVisualStyleBackColor = true;
+            // 
+            // checkAyuntamiento
+            // 
+            this.checkAyuntamiento.AutoSize = true;
+            this.checkAyuntamiento.Checked = true;
+            this.checkAyuntamiento.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkAyuntamiento.Enabled = false;
+            this.checkAyuntamiento.Location = new System.Drawing.Point(22, 354);
+            this.checkAyuntamiento.Name = "checkAyuntamiento";
+            this.checkAyuntamiento.Size = new System.Drawing.Size(90, 17);
+            this.checkAyuntamiento.TabIndex = 41;
+            this.checkAyuntamiento.Text = "Ayuntamiento";
+            this.checkAyuntamiento.UseVisualStyleBackColor = true;
+            // 
+            // héroesToolStripMenuItem
+            // 
+            this.héroesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wardenToolStripMenuItem,
+            this.reyToolStripMenuItem,
+            this.reinaToolStripMenuItem});
+            this.héroesToolStripMenuItem.Name = "héroesToolStripMenuItem";
+            this.héroesToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.héroesToolStripMenuItem.Text = "Héroes";
+            // 
+            // wardenToolStripMenuItem
+            // 
+            this.wardenToolStripMenuItem.Name = "wardenToolStripMenuItem";
+            this.wardenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.wardenToolStripMenuItem.Text = "Warden";
+            this.wardenToolStripMenuItem.Click += new System.EventHandler(this.wardenToolStripMenuItem_Click);
+            // 
+            // reyToolStripMenuItem
+            // 
+            this.reyToolStripMenuItem.Name = "reyToolStripMenuItem";
+            this.reyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reyToolStripMenuItem.Text = "Rey";
+            this.reyToolStripMenuItem.Click += new System.EventHandler(this.reyToolStripMenuItem_Click);
+            // 
+            // reinaToolStripMenuItem
+            // 
+            this.reinaToolStripMenuItem.Name = "reinaToolStripMenuItem";
+            this.reinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reinaToolStripMenuItem.Text = "Reina";
+            this.reinaToolStripMenuItem.Click += new System.EventHandler(this.reinaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 535);
+            this.Controls.Add(this.checkCastillo);
+            this.Controls.Add(this.checkAyuntamiento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblElixirRojo);
             this.Controls.Add(this.listCuartelesOscuros);
@@ -1021,10 +1047,6 @@
             this.Controls.Add(this.oroAldea);
             this.Controls.Add(this.listCampamentos);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.listView8);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.listView9);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.listView4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listView5);
@@ -1044,9 +1066,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkWarden);
+            this.Controls.Add(this.checkReina);
+            this.Controls.Add(this.checkRey);
             this.Controls.Add(this.lblTropasOscuras);
             this.Controls.Add(this.listTropaOscura);
             this.Controls.Add(this.lblTropasNormales);
@@ -1112,9 +1134,9 @@
         private System.Windows.Forms.Label lblTropasNormales;
         private System.Windows.Forms.ListView listTropaOscura;
         private System.Windows.Forms.Label lblTropasOscuras;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkRey;
+        private System.Windows.Forms.CheckBox checkReina;
+        private System.Windows.Forms.CheckBox checkWarden;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView listView2;
@@ -1136,10 +1158,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listCampamentos;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListView listView9;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTropas;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblElixirRojo;
@@ -1169,6 +1187,12 @@
         private System.Windows.Forms.ToolStripMenuItem crearRecolectoraDeElixirRojoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearRecolectoraDeElixirNegroToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem héroesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wardenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reinaToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkCastillo;
+        private System.Windows.Forms.CheckBox checkAyuntamiento;
     }
 }
 
