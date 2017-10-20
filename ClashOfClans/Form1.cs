@@ -19,11 +19,7 @@ namespace ClashOfClans
         {
             InitializeComponent();
 
-            listCuarteles.Columns.Add("Nombre");
-            listCuarteles.Columns.Add("Nivel");
-
-            listCuartelesOscuros.Columns.Add("Nombre");
-            listCuartelesOscuros.Columns.Add("Nivel");
+           
         }
 
         private void antiaereoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,22 +66,24 @@ namespace ClashOfClans
         private void crearAldeaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             miAldea = new Aldea();
-            int oro = miAldea.almacenOro;
+            int oro = miAldea.OroDisponible();
             this.oroAldea.Text = oro.ToString();
-            //todo Metodo para hallar espacioLibre
+            
+            int espacioLibre = miAldea.EspaciosDisponibles();
+            this.espacioLibreAldea.Text = espacioLibre.ToString();
 
-            int elixirRojo = miAldea.almacenElixirRojo;
+            int elixirRojo = miAldea.ElixirRojoDisponible();
             this.elixirRojoAldea.Text = elixirRojo.ToString();
 
-            int elixirNegro = miAldea.almacenElixirNegro;
+            int elixirNegro = miAldea.ElixirNegroDisponible();
             this.elixirNegroAldea.Text = elixirNegro.ToString();
 
         }
 
         private void cuartelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Cuartel c = miAldea.crearEdificioCuartelNormal();
-            String[] nuevoCuartel = { c.nombre, c.nivel.ToString() };
+            miAldea.crearEdificioCuartelNormal();
+            String[] nuevoCuartel = { "Cuartel"};
             var nuevoCuartelAgregar = new ListViewItem(nuevoCuartel);
             listCuarteles.Items.Add(nuevoCuartelAgregar);
         }
