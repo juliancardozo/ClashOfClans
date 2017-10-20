@@ -479,7 +479,6 @@
             // 
             // listTropasNormales
             // 
-            this.listTropasNormales.Enabled = false;
             this.listTropasNormales.Location = new System.Drawing.Point(74, 57);
             this.listTropasNormales.Name = "listTropasNormales";
             this.listTropasNormales.Size = new System.Drawing.Size(83, 82);
@@ -497,7 +496,6 @@
             // 
             // listView1
             // 
-            this.listView1.Enabled = false;
             this.listView1.Location = new System.Drawing.Point(184, 57);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(83, 82);

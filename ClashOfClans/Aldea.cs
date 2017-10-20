@@ -32,6 +32,7 @@ namespace ClashOfClans
         public Dictionary<String, IFactoryTropaNormal> constructoresTropaNormal;
         public Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
         public Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
+        private string nombreClan;
 
         public Aldea(String nombreClan)
         {

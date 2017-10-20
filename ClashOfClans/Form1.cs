@@ -65,7 +65,7 @@ namespace ClashOfClans
 
         private void crearAldeaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea = new Aldea();
+            miAldea = new Aldea("Nombre de la Aldea");
             int oro = miAldea.OroDisponible();
             this.oroAldea.Text = oro.ToString();
             
