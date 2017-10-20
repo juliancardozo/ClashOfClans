@@ -32,7 +32,7 @@ namespace ClashOfClans
             almacenElixirRojo = 0;
             almacenElixirNegro = 0;
             espacio = 1000;
-            nombreCastillo= "Castillo del Clan";
+            nombreCastillo= aldea.nombreClan;
             this.aldea = aldea;
             nombre = "Castillo";
             almacenElixirRojo = 0;

@@ -33,8 +33,9 @@ namespace ClashOfClans
         public Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
         public Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
 
-        public Aldea()
+        public Aldea(String nombreClan)
         {
+            this.nombreClan = nombreClan;
             this.ayuntamiento = new Ayuntamiento(this);
             this.castillo = new Castillo(this);
 

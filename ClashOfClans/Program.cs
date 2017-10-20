@@ -17,6 +17,11 @@ namespace ClashOfClans
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+
+            Aldea aldea = new Aldea("Sparta");
+
+
         }
     }
 }
