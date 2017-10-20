@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IRecolectora:IEdificio
+    public interface IRecolectora :IEdificio
     {
         Int32 Recolectar();
     }

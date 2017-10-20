@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    class FactoryAlamcenElixirNegro: IFactoryAlmacen
+    public class FactoryAlamcenElixirNegro : IFactoryAlmacen
     {
     
         public IAlmacen Instanciar(Aldea aldea)

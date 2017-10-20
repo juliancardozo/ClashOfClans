@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IAlmacen:IEdificio
+    public interface IAlmacen :IEdificio
     {
         Int32 capacidadMaxima { get; set; }
         Int32 capacidadDisponible { get; set; }

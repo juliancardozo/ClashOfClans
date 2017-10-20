@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
-    interface IOscura
+    public interface IOscura
     {
         Int32 elixirNegro { get; }
     }
