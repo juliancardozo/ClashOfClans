@@ -158,7 +158,7 @@ namespace ClashOfClans
             return total;
         }
 
-        public void crearEdificioDefensivo(String edificioNombre)
+        public bool crearEdificioDefensivo(String edificioNombre)
         {
             IDefensivo edificio = constructoresEdificiosDefensivo[edificioNombre].Instanciar(this);
             Int32 cantidad = 0;
@@ -175,117 +175,141 @@ namespace ClashOfClans
             if (cantidad < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
             {
                 this.defensivos.Add(edificio);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioTerrestre()
+        public bool crearEdificioTerrestre()
         {
             ITerrestre edificio = new Canon(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.terrestres.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
             {
                 this.terrestres.Add(edificio);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioAntiAereo()
+        public bool crearEdificioAntiAereo()
         {
             IAntiaereo edificio = new Antiaereo(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.antiaereos.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
             {
                 this.antiaereos.Add(edificio);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioCuartelNormal()
+        public bool crearEdificioCuartelNormal()
         {
             Cuartel cuartel = new Cuartel(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.cuartelesNormal.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
             {
                 this.cuartelesNormal.Add(cuartel);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioCuartelOscuro()
+        public bool crearEdificioCuartelOscuro()
         {
             CuartelOscuro cuartel = new CuartelOscuro(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.cuartelesOscuro.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
             {
                 this.cuartelesOscuro.Add(cuartel);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioCampamento()
+        public bool crearEdificioCampamento()
         {
             Campamento campamento = new Campamento(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.campamentos.Count < campamento.cantidadMaxima || campamento.cantidadMaxima != 0)
             {
                 this.campamentos.Add(campamento);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioAlmacenOro()
+        public bool crearEdificioAlmacenOro()
         {
             AlmacenOro almacen = new AlmacenOro(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.almacenesOro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
             {
                 this.almacenesOro.Add(almacen);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioElixirRojo()
+        public bool crearEdificioElixirRojo()
         {
             AlmacenElixirRojo almacen = new AlmacenElixirRojo(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.almacenesElixirRojo.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
             {
                 this.almacenesElixirRojo.Add(almacen);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioElixirNegro()
+        public bool crearEdificioElixirNegro()
         {
             AlmacenElixirNegro almacen = new AlmacenElixirNegro(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.almacenesElixirNegro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
             {
                 this.almacenesElixirNegro.Add(almacen);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioRecolectoraOro()
+        public bool crearEdificioRecolectoraOro()
         {
             RecolectoraOro recolectora = new RecolectoraOro(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.recolectorasOro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
             {
                 this.recolectorasOro.Add(recolectora);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioRecolectoraElixirRojo()
+        public bool crearEdificioRecolectoraElixirRojo()
         {
             RecolectoraElixirRojo recolectora = new RecolectoraElixirRojo(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.recolectorasElixirRojo.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
             {
                 this.recolectorasElixirRojo.Add(recolectora);
+                return true;
             }
+            return false;
         }
 
-        public void crearEdificioRecolectoraElixirNegro()
+        public bool crearEdificioRecolectoraElixirNegro()
         {
             RecolectoraElixirNegro recolectora = new RecolectoraElixirNegro(this);
             // Controlo la cantidad maxima de edificios de este tipo
             if (this.recolectorasElixirNegro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
             {
                 this.recolectorasElixirNegro.Add(recolectora);
+                return true;
             }
+            return false;
         }
 
         public void crearWarden()
