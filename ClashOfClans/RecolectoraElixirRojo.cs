@@ -9,13 +9,9 @@ namespace ClashOfClans
     public class RecolectoraElixirRojo :IRecolectora
     {
         public String nombre { get; }
-
         public Int32 vida { get; }
-
         public Int32 nivel { get; }
-
         public Int32 dano { get; }
-
         public Aldea aldea { get; set; }
         public Int32 cantidadMaxima { get; set; }
 
@@ -28,11 +24,18 @@ namespace ClashOfClans
             cantidadMaxima = 6;
         }
 
-        public RecolectoraElixirRojo() { }
-
-        public Int32 Recolectar()
+        public void Recolectar()
         {
-            return 50;
+            Int32 cantidad = 200;
+            // Recorro los almacenes depositandolo que puedo
+            foreach(AlmacenElixirRojo almacen in aldea.almacenesElixirRojo)
+            {
+                if(cantidad > 0)
+                {
+                    Int32 colocado = almacen.AlmacenarElixirRojo(cantidad);
+                    cantidad -= colocado;
+                }
+            }
         }
     }
 }

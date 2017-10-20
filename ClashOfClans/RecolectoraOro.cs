@@ -29,10 +29,19 @@ namespace ClashOfClans
             cantidadMaxima = 6;
         }
 
-        public Int32 Recolectar()
+        public void Recolectar()
         {
-            return 50;
+            Int32 cantidad = 200;
+            // Recorro los almacenes depositandolo que puedo
+            foreach (AlmacenOro almacen in aldea.almacenesOro)
+            {
+                if (cantidad > 0)
+                {
+                    Int32 colocado = almacen.AlmacenarOro(cantidad);
+                    cantidad -= colocado;
+                }
+            }
         }
-        
+
     }
 }

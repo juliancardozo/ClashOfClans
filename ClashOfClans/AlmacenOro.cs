@@ -30,13 +30,16 @@ namespace ClashOfClans
             cantidadMaxima = 4;
         }
 
-        public void AlmacenarOro(Int32 oro)
+        public Int32 AlmacenarOro(Int32 oro)
         {
+            Int32 cantidadAntes = disponible;
             disponible += oro;
             if(disponible > capacidadMaxima)
             {
                 disponible = capacidadMaxima;
             }
+
+            return (disponible - cantidadAntes);
         }
 
         public void ExtraerOro(Int32 oro)

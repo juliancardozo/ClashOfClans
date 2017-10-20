@@ -27,13 +27,17 @@ namespace ClashOfClans
             disponible = 0;
             cantidadMaxima = 4;
         }
-        public void AlmacenarElixirRojo(Int32 elixirRojo)
+        public Int32 AlmacenarElixirRojo(Int32 elixirRojo)
         {
+            Int32 disponibleAntes = disponible;
             disponible += elixirRojo;
             if(disponible > capacidadMaxima)
             {
                 disponible = capacidadMaxima;
             }
+
+            // Devuelvo lo almacenado
+            return (disponible - disponibleAntes);
         }
 
         public void ExtraerElixirRojo(Int32 elixirRojo)

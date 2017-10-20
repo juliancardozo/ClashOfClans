@@ -28,11 +28,19 @@ namespace ClashOfClans
             nivel = 1;
             cantidadMaxima = 3;
         }
-        public RecolectoraElixirNegro() { }
 
-        public Int32 Recolectar()
+        public void Recolectar()
         {
-            return 50;
+            Int32 cantidad = 200;
+            // Recorro los almacenes depositandolo que puedo
+            foreach (AlmacenElixirNegro almacen in aldea.almacenesElixirNegro)
+            {
+                if (cantidad > 0)
+                {
+                    Int32 colocado = almacen.AlmacenarElixirNegro(cantidad);
+                    cantidad -= colocado;
+                }
+            }
         }
     }
 }

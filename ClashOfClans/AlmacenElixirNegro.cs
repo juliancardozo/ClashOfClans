@@ -29,13 +29,16 @@ namespace ClashOfClans
             cantidadMaxima = 1;
         }
 
-        public void AlmacenarElixirNegro(Int32 elixirNegro)
+        public Int32 AlmacenarElixirNegro(Int32 elixirNegro)
         {
+            Int32 cantidadAntes = disponible;
             disponible += elixirNegro;
             if(disponible > capacidadMaxima)
             {
                 disponible = capacidadMaxima;
             }
+
+            return (disponible - cantidadAntes);
         }
 
         public void ExtraerElixirNegro(Int32 elixirNegro)
