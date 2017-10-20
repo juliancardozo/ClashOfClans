@@ -28,8 +28,7 @@ namespace ClashOfClans
         public Warden Warden { get; set; }
         public Rey Rey { get; set; }
         public Reina Reina { get; set; }
-        private string nombreClan;
-        public string NombreClan { get => nombreClan; set => nombreClan = value; }
+        public string nombreClan;
 
         public Dictionary<String, IFactoryTropaNormal> constructoresTropaNormal;
         public Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
@@ -41,16 +40,21 @@ namespace ClashOfClans
             this.ayuntamiento = new Ayuntamiento(this);
             this.castillo = new Castillo(this);
 
+            tropasNormales = new List<ITropaNormal>();
+            tropasOscuras = new List<ITropaOscura>();
+
             defensivos = new List<IDefensivo>();
             terrestres = new List<ITerrestre>();
             antiaereos = new List<IAntiaereo>();
             cuartelesNormal = new List<Cuartel>();
             cuartelesOscuro = new List<CuartelOscuro>();
+            almacenesOro = new List<AlmacenOro>();
             almacenesElixirRojo = new List<AlmacenElixirRojo>();
             almacenesElixirNegro = new List<AlmacenElixirNegro>();
             recolectorasOro = new List<RecolectoraOro>();
             recolectorasElixirRojo = new List<RecolectoraElixirRojo>();
             recolectorasElixirNegro = new List<RecolectoraElixirNegro>();
+            campamentos = new List<Campamento>();
 
             constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
             constructoresTropaNormal.Add("Arquera", new FactoryArquera());
