@@ -24,9 +24,15 @@ namespace ClashOfClans
             this.dano = 50;
             this.espacio = 1;
         }
+
         public void Atacar()
         {
             Console.WriteLine("Ataca el Warden.");
+        }
+
+        public void AtacarEspecial()
+        {
+            Console.WriteLine("Ataca con superpoder el Warden.");
         }
     }
 }

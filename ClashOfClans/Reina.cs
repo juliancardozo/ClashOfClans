@@ -29,5 +29,10 @@ namespace ClashOfClans
         {
             Console.WriteLine("Ataca la Reina.");
         }
+
+        public void AtacarEspecial()
+        {
+            Console.WriteLine("Ataca con superpoder la Reina.");
+        }
     }
 }
