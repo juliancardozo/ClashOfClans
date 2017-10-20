@@ -8,31 +8,32 @@ namespace ClashOfClans
 {
     public class Aldea
     {
-        public List<IDefensivo> defensivos; // pronto
-        public List<ITerrestre> terrestres; // pronto
-        public List<IAntiaereo> antiaereos; // pronto
-        public List<Cuartel> cuartelesNormal; // pronto
-        public List<CuartelOscuro> cuartelesOscuro; // pronto
-        public readonly Ayuntamiento ayuntamiento; // pronto
-        public readonly Castillo castillo; // pronto
-        public List<Campamento> campamentos; // pronto
-        public List<AlmacenOro> almacenesOro; // pronto
-        public List<AlmacenElixirRojo> almacenesElixirRojo; // pronto
-        public List<AlmacenElixirNegro> almacenesElixirNegro; // pronto
-        public List<RecolectoraOro> recolectorasOro; // pronto
-        public List<RecolectoraElixirRojo> recolectorasElixirRojo; // pronto
-        public List<RecolectoraElixirNegro> recolectorasElixirNegro; // pronto
+        public List<IDefensivo> defensivos;
+        public List<ITerrestre> terrestres;
+        public List<IAntiaereo> antiaereos;
+        public List<Cuartel> cuartelesNormal;
+        public List<CuartelOscuro> cuartelesOscuro;
+        public readonly Ayuntamiento ayuntamiento;
+        public readonly Castillo castillo;
+        public List<Campamento> campamentos;
+        public List<AlmacenOro> almacenesOro;
+        public List<AlmacenElixirRojo> almacenesElixirRojo;
+        public List<AlmacenElixirNegro> almacenesElixirNegro;
+        public List<RecolectoraOro> recolectorasOro;
+        public List<RecolectoraElixirRojo> recolectorasElixirRojo;
+        public List<RecolectoraElixirNegro> recolectorasElixirNegro;
 
         public List<ITropaNormal> tropasNormales;
         public List<ITropaOscura> tropasOscuras;
-        public Warden Warden { get; set; } // pronto
-        public Rey Rey { get; set; } // pronto
-        public Reina Reina { get; set; } // pronto
+        public Warden Warden { get; set; }
+        public Rey Rey { get; set; }
+        public Reina Reina { get; set; }
+        private string nombreClan;
+        public string NombreClan { get => nombreClan; set => nombreClan = value; }
 
         public Dictionary<String, IFactoryTropaNormal> constructoresTropaNormal;
         public Dictionary<String, IFactoryTropaOscura> constructoresTropaOscuro;
         public Dictionary<String, IFactoryDefensivo> constructoresEdificiosDefensivo;
-        private string nombreClan;
 
         public Aldea(String nombreClan)
         {
@@ -45,8 +46,13 @@ namespace ClashOfClans
             antiaereos = new List<IAntiaereo>();
             cuartelesNormal = new List<Cuartel>();
             cuartelesOscuro = new List<CuartelOscuro>();
+            almacenesElixirRojo = new List<AlmacenElixirRojo>();
+            almacenesElixirNegro = new List<AlmacenElixirNegro>();
+            recolectorasOro = new List<RecolectoraOro>();
+            recolectorasElixirRojo = new List<RecolectoraElixirRojo>();
+            recolectorasElixirNegro = new List<RecolectoraElixirNegro>();
 
-            constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
+        constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
             constructoresTropaNormal.Add("Arquera", new FactoryArquera());
             constructoresTropaNormal.Add("Barbaro", new FactoryBarbaro());
             constructoresTropaNormal.Add("Gigante", new FactoryGigante());
@@ -84,7 +90,10 @@ namespace ClashOfClans
             Int32 total = 0;
             if (ayuntamiento != null){ total += ayuntamiento.almacenOro;  }
             if (castillo != null) { total += castillo.almacenOro; }
-            foreach (AlmacenOro almancen in almacenesOro){ total += almancen.disponible; }
+            if (almacenesOro.Count > 0)
+            {
+                foreach (AlmacenOro almancen in almacenesOro) { total += almancen.disponible; }
+            }
 
             return total;
         }
@@ -94,10 +103,15 @@ namespace ClashOfClans
             Int32 total = 0;
             if (ayuntamiento != null) { total += ayuntamiento.almacenElixirRojo; }
             if (castillo != null) { total += castillo.almacenElixirRojo; }
-            foreach (AlmacenElixirRojo almancen in almacenesElixirRojo) { total += almancen.disponible; }
+            if (almacenesElixirRojo.Count > 0){
+                foreach (AlmacenElixirRojo almancen in almacenesElixirRojo) { total += almancen.disponible; }
+            }
 
             // Resto el usado por las tropas normales
-            foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.elixirRojo; }
+            if(tropasNormales.Count > 0)
+            {
+                foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.elixirRojo; }
+            }
 
             return total;
         }
@@ -106,10 +120,16 @@ namespace ClashOfClans
         {
             Int32 total = 0;
             if (castillo != null) { total += castillo.almacenElixirNegro; }
-            foreach (AlmacenElixirNegro almancen in almacenesElixirNegro) { total += almancen.disponible; }
+            if (almacenesElixirNegro.Count > 0)
+            {
+                foreach (AlmacenElixirNegro almancen in almacenesElixirNegro) { total += almancen.disponible; }
+            }
 
             // Resto el usado por las tropas oscuras
-            foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.elixirNegro; }
+            if(tropasOscuras.Count > 0)
+            {
+                foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.elixirNegro; }
+            }
 
             return total;
         }
@@ -121,8 +141,14 @@ namespace ClashOfClans
             if (castillo != null){ total += castillo.espacio; }
 
             // Resto las tropas
-            foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.espacio; }
-            foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.espacio; }
+            if (tropasNormales.Count > 0)
+            {
+                foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.espacio; }
+            }
+            if(tropasOscuras.Count > 0)
+            {
+                foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.espacio; }
+            }
 
             return total;
         }
@@ -131,11 +157,13 @@ namespace ClashOfClans
         {
             IDefensivo edificio = constructoresEdificiosDefensivo[edificioNombre].Instanciar(this);
             Int32 cantidad = 0;
-            foreach (IDefensivo e in defensivos)
-            {
-                if (e.nombre == edificio.nombre)
+            if (defensivos.Count > 0) {
+                foreach (IDefensivo e in defensivos)
                 {
-                    cantidad++;
+                    if (e.nombre == edificio.nombre)
+                    {
+                        cantidad++;
+                    }
                 }
             }
 
