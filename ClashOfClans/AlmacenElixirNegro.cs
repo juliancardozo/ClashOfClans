@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+
+    /// <summary>
+    /// Si en el metodo almacenar se supera la capacidad maxima, se iguala y el metodo devuelve un Int32 indicando cuanto se almaceno.
+    /// </summary>
+
     public class AlmacenElixirNegro :IAlmacen
     {
         public String nombre { get; }

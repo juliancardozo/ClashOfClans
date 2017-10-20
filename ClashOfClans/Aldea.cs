@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans
 {
+
+    /// <summary>
+    /// Todos los metodos para crear edificios devuelven un valor booleano para saber si la operacion se realizo con exito o no. Para de esta forma saber si corresponde actualizar un listado de windowsForm.
+    /// Hay un List para cada tipo de edificio, segun esta el UML.
+    /// </summary>
+
     public class Aldea
     {
         public List<IDefensivo> defensivos;
@@ -172,7 +178,7 @@ namespace ClashOfClans
                 }
             }
 
-            if (cantidad < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
+            if (cantidad < edificio.cantidadMaxima || edificio.cantidadMaxima == 0)
             {
                 this.defensivos.Add(edificio);
                 return true;
@@ -184,7 +190,7 @@ namespace ClashOfClans
         {
             ITerrestre edificio = new Canon(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.terrestres.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
+            if (this.terrestres.Count < edificio.cantidadMaxima || edificio.cantidadMaxima == 0)
             {
                 this.terrestres.Add(edificio);
                 return true;
@@ -196,7 +202,7 @@ namespace ClashOfClans
         {
             IAntiaereo edificio = new Antiaereo(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.antiaereos.Count < edificio.cantidadMaxima || edificio.cantidadMaxima != 0)
+            if (this.antiaereos.Count < edificio.cantidadMaxima || edificio.cantidadMaxima == 0)
             {
                 this.antiaereos.Add(edificio);
                 return true;
@@ -208,7 +214,7 @@ namespace ClashOfClans
         {
             Cuartel cuartel = new Cuartel(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.cuartelesNormal.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
+            if (this.cuartelesNormal.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima == 0)
             {
                 this.cuartelesNormal.Add(cuartel);
                 return true;
@@ -220,7 +226,7 @@ namespace ClashOfClans
         {
             CuartelOscuro cuartel = new CuartelOscuro(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.cuartelesOscuro.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima != 0)
+            if (this.cuartelesOscuro.Count < cuartel.cantidadMaxima || cuartel.cantidadMaxima == 0)
             {
                 this.cuartelesOscuro.Add(cuartel);
                 return true;
@@ -232,7 +238,7 @@ namespace ClashOfClans
         {
             Campamento campamento = new Campamento(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.campamentos.Count < campamento.cantidadMaxima || campamento.cantidadMaxima != 0)
+            if (this.campamentos.Count < campamento.cantidadMaxima || campamento.cantidadMaxima == 0)
             {
                 this.campamentos.Add(campamento);
                 return true;
@@ -244,7 +250,7 @@ namespace ClashOfClans
         {
             AlmacenOro almacen = new AlmacenOro(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.almacenesOro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            if (this.almacenesOro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima == 0)
             {
                 this.almacenesOro.Add(almacen);
                 return true;
@@ -256,7 +262,7 @@ namespace ClashOfClans
         {
             AlmacenElixirRojo almacen = new AlmacenElixirRojo(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.almacenesElixirRojo.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            if (this.almacenesElixirRojo.Count < almacen.cantidadMaxima || almacen.cantidadMaxima == 0)
             {
                 this.almacenesElixirRojo.Add(almacen);
                 return true;
@@ -268,7 +274,7 @@ namespace ClashOfClans
         {
             AlmacenElixirNegro almacen = new AlmacenElixirNegro(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.almacenesElixirNegro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima != 0)
+            if (this.almacenesElixirNegro.Count < almacen.cantidadMaxima || almacen.cantidadMaxima == 0)
             {
                 this.almacenesElixirNegro.Add(almacen);
                 return true;
@@ -280,7 +286,7 @@ namespace ClashOfClans
         {
             RecolectoraOro recolectora = new RecolectoraOro(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.recolectorasOro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            if (this.recolectorasOro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima == 0)
             {
                 this.recolectorasOro.Add(recolectora);
                 return true;
@@ -292,7 +298,7 @@ namespace ClashOfClans
         {
             RecolectoraElixirRojo recolectora = new RecolectoraElixirRojo(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.recolectorasElixirRojo.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            if (this.recolectorasElixirRojo.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima == 0)
             {
                 this.recolectorasElixirRojo.Add(recolectora);
                 return true;
@@ -304,7 +310,7 @@ namespace ClashOfClans
         {
             RecolectoraElixirNegro recolectora = new RecolectoraElixirNegro(this);
             // Controlo la cantidad maxima de edificios de este tipo
-            if (this.recolectorasElixirNegro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima != 0)
+            if (this.recolectorasElixirNegro.Count < recolectora.cantidadMaxima || recolectora.cantidadMaxima == 0)
             {
                 this.recolectorasElixirNegro.Add(recolectora);
                 return true;

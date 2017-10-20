@@ -9,13 +9,9 @@ namespace ClashOfClans
     class Aguila:IDefensivo
     {
         public String nombre { get; }
-
         public Int32 vida { get; }
-
         public Int32 nivel { get; }
-
         public Int32 dano { get; }
-
         public Aldea aldea { get; set; }
         public Int32 cantidadMaxima { get; set; }
         public Aguila(Aldea aldea)
