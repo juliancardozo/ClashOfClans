@@ -25,6 +25,10 @@ namespace ClashOfClans
             cantidadMaxima = 2;
         }
 
+        /// <summary>
+        /// Si cumplo todos los recuros y espacios necesarios devuelvo true, sino false
+        /// </summary>
+
         public void crearTropaOscura(String tropa)
         {
             ITropaOscura t = aldea.constructoresTropaOscuro[tropa].Instanciar(aldea);
@@ -32,7 +36,9 @@ namespace ClashOfClans
             if (aldea.EspaciosDisponibles() >= t.espacio && aldea.ElixirNegroDisponible() >= t.elixirNegro)
             {
                 aldea.tropasOscuras.Add(t);
+                return true;
             }
+            return false;
         }
     }
 
