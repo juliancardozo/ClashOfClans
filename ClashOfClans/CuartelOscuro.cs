@@ -9,28 +9,31 @@ namespace ClashOfClans
     public class CuartelOscuro :IProduccion
     {
         
-            public String nombre { get; }
-
-            public Int32 vida { get; }
-
-            public Int32 nivel { get; }
-
-            public Int32 dano { get; }
-
-            public Aldea aldea { get; set; }
+        public String nombre { get; }
+        public Int32 vida { get; }
+        public Int32 nivel { get; }
+        public Int32 dano { get; }
+        public Aldea aldea { get; set; }
         public Int32 cantidadMaxima { get; set; }
 
-
         public CuartelOscuro(Aldea aldea)
-            {
-                this.aldea = aldea;
-                nombre = "Cuartel Oscuro";
-                vida = 1000;
-                nivel = 1;
+        {
+            this.aldea = aldea;
+            nombre = "Cuartel Oscuro";
+            vida = 1000;
+            nivel = 1;
             cantidadMaxima = 2;
-
-            }
-
-            public void GenerarOscura() { }
         }
+
+        public void crearTropaOscura(String tropa)
+        {
+            ITropaOscura t = aldea.constructoresTropaOscuro[tropa].Instanciar(aldea);
+
+            if (aldea.EspaciosDisponibles() >= t.espacio && aldea.ElixirNegroDisponible() >= t.elixirNegro)
+            {
+                aldea.tropasOscuras.Add(t);
+            }
+        }
+    }
+
 }

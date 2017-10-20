@@ -8,15 +8,6 @@ namespace ClashOfClans
 {
     public class Aldea
     {
-
-        private Int32 almacenOro;
-        private Int32 almacenElixirRojo;
-        private Int32 almacenElixirNegro;
-
-        public int AlmacenOro { get => almacenOro; set => almacenOro = value; }
-        public int AlmacenElixirRojo { get => almacenElixirRojo; set => almacenElixirRojo = value; }
-        public int AlmacenElixirNegro { get => almacenElixirNegro; set => almacenElixirNegro = value; }
-
         public List<IDefensivo> defensivos; // pronto
         public List<ITerrestre> terrestres; // pronto
         public List<IAntiaereo> antiaereos; // pronto
@@ -44,11 +35,6 @@ namespace ClashOfClans
 
         public Aldea()
         {
-
-            almacenOro = 1000;
-            almacenElixirRojo = 800;
-            almacenElixirNegro = 500;
-
             this.ayuntamiento = new Ayuntamiento(this);
             this.castillo = new Castillo(this);
 
@@ -91,6 +77,55 @@ namespace ClashOfClans
 
         }
 
+        public Int32 OroDisponible()
+        {
+            Int32 total = 0;
+            if (ayuntamiento != null){ total += ayuntamiento.almacenOro;  }
+            if (castillo != null) { total += castillo.almacenOro; }
+            foreach (AlmacenOro almancen in almacenesOro){ total += almancen.disponible; }
+
+            return total;
+        }
+
+        public Int32 ElixirRojoDisponible()
+        {
+            Int32 total = 0;
+            if (ayuntamiento != null) { total += ayuntamiento.almacenElixirRojo; }
+            if (castillo != null) { total += castillo.almacenElixirRojo; }
+            foreach (AlmacenElixirRojo almancen in almacenesElixirRojo) { total += almancen.disponible; }
+
+            // Resto el usado por las tropas normales
+            foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.elixirRojo; }
+
+            return total;
+        }
+
+        public Int32 ElixirNegroDisponible()
+        {
+            Int32 total = 0;
+            if (castillo != null) { total += castillo.almacenElixirNegro; }
+            foreach (AlmacenElixirNegro almancen in almacenesElixirNegro) { total += almancen.disponible; }
+
+            // Resto el usado por las tropas oscuras
+            foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.elixirNegro; }
+
+            return total;
+        }
+
+        public Int32 EspaciosDisponibles()
+        {
+            Int32 total = 0;
+            foreach (Campamento campamento in campamentos)
+            {
+                total += campamento.espacio;
+            }
+            if (castillo != null)
+            {
+                total += castillo.espacio;
+            }
+
+            return total;
+        }
 
         public void crearEdificioDefensivo(String edificioNombre)
         {

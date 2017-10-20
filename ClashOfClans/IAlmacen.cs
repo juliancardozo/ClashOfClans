@@ -9,7 +9,7 @@ namespace ClashOfClans
     public interface IAlmacen :IEdificio
     {
         Int32 capacidadMaxima { get; set; }
-        Int32 capacidadDisponible { get; set; }
+        Int32 disponible { get; set; }
 
         
 

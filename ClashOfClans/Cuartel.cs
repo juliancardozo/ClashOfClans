@@ -29,51 +29,7 @@ namespace ClashOfClans
         public void crearTropa(String tropa){
             ITropaNormal t = aldea.constructoresTropaNormal[tropa].Instanciar(aldea);
 
-            // Controlo espacios disponibles
-            Int32 totalEspaciosDisponibles = 0;
-            foreach (Campamento campamento in aldea.campamentos)
-            {
-                totalEspaciosDisponibles += campamento.espacio;
-            }
-            if (aldea.castillo != null)
-            {
-                totalEspaciosDisponibles += aldea.castillo.espacio;
-            }
-            bool espacioDisponible = (totalEspaciosDisponibles >= t.espacio);
-
-
-
-
-            //
-            //
-            //
-            //
-            //
-            //
-            //   F A L T A    restar consumo de recursos, osea contar todas las tropas y edificios y restar al disponible
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-
-            // Controlo recursos disponibles
-            Int32 totalElixirRojoDisponibel = 0;
-            if(aldea.ayuntamiento != null)
-            {
-                totalElixirRojoDisponibel += aldea.ayuntamiento.almacenElixirRojo;
-            }
-            foreach (Campamento campamento in aldea.campamentos)
-            {
-                totalEspaciosDisponibles += campamento.espacio;
-            }
-            bool recursosDisponibles = (totalElixirRojoDisponibel >= t.elixirRojo);
-
-            if(espacioDisponible && recursosDisponibles)
+            if (aldea.EspaciosDisponibles() >= t.espacio && aldea.ElixirRojoDisponible() >= t.elixirRojo)
             {
                 aldea.tropasNormales.Add(t);
             }
