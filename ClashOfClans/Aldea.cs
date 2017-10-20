@@ -81,6 +81,9 @@ namespace ClashOfClans
             constructoresTropaOscuro.Add("Lava", new FactoryLava());
             constructoresTropaOscuro.Add("LanzaRocas", new FactoryLanzaRoca());
             constructoresTropaOscuro.Add("MontaPuercos", new FactoryMontaPuerco());
+            constructoresTropaOscuro.Add("Bruja", new FactoryBruja());
+            constructoresTropaOscuro.Add("Golem", new FactoryGolem());
+            constructoresTropaOscuro.Add("Valkiria", new FactoryValkiria());
 
             constructoresEdificiosDefensivo = new Dictionary<string, IFactoryDefensivo>();
             constructoresEdificiosDefensivo.Add("TorreArquera", new FactoryTorreArquera());

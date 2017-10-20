@@ -74,16 +74,19 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.recolectorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectoraOroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearRecolectoraDeOroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectarOroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectoraDeElixirRojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearRecolectoraDeElixirRojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectarElixirRojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectoraDeElixirNegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearRecolectoraDeElixirNegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recolectarElixirNegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.campamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listTropasNormales = new System.Windows.Forms.ListView();
             this.lblTropasNormales = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listTropaOscura = new System.Windows.Forms.ListView();
             this.lblTropasOscuras = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -127,11 +130,9 @@
             this.lblCuarteles = new System.Windows.Forms.Label();
             this.listCuartelesOscuros = new System.Windows.Forms.ListView();
             this.lblCuartelesOscuros = new System.Windows.Forms.Label();
-            this.crearRecolectoraDeOroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearRecolectoraDeElixirRojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearRecolectoraDeElixirNegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -170,90 +171,90 @@
             this.magoToolStripMenuItem,
             this.pekkaToolStripMenuItem});
             this.tropaNormalToolStripMenuItem.Name = "tropaNormalToolStripMenuItem";
-            this.tropaNormalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.tropaNormalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tropaNormalToolStripMenuItem.Text = "Tropa Normal";
             // 
             // arqueraToolStripMenuItem
             // 
             this.arqueraToolStripMenuItem.Name = "arqueraToolStripMenuItem";
-            this.arqueraToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.arqueraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.arqueraToolStripMenuItem.Text = "Arquera";
             this.arqueraToolStripMenuItem.Click += new System.EventHandler(this.arqueraToolStripMenuItem_Click);
             // 
             // barbaroToolStripMenuItem
             // 
             this.barbaroToolStripMenuItem.Name = "barbaroToolStripMenuItem";
-            this.barbaroToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.barbaroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.barbaroToolStripMenuItem.Text = "Barbaro";
             this.barbaroToolStripMenuItem.Click += new System.EventHandler(this.barbaroToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem1.Text = "Curandera";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // dragonToolStripMenuItem
             // 
             this.dragonToolStripMenuItem.Name = "dragonToolStripMenuItem";
-            this.dragonToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.dragonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dragonToolStripMenuItem.Text = "Dragon";
             this.dragonToolStripMenuItem.Click += new System.EventHandler(this.dragonToolStripMenuItem_Click);
             // 
             // dragonBebéToolStripMenuItem
             // 
             this.dragonBebéToolStripMenuItem.Name = "dragonBebéToolStripMenuItem";
-            this.dragonBebéToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.dragonBebéToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dragonBebéToolStripMenuItem.Text = "Dragon Bebé";
             this.dragonBebéToolStripMenuItem.Click += new System.EventHandler(this.dragonBebéToolStripMenuItem_Click);
             // 
             // duendeToolStripMenuItem
             // 
             this.duendeToolStripMenuItem.Name = "duendeToolStripMenuItem";
-            this.duendeToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.duendeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.duendeToolStripMenuItem.Text = "Duende";
             this.duendeToolStripMenuItem.Click += new System.EventHandler(this.duendeToolStripMenuItem_Click);
             // 
             // esqueletoToolStripMenuItem
             // 
             this.esqueletoToolStripMenuItem.Name = "esqueletoToolStripMenuItem";
-            this.esqueletoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.esqueletoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.esqueletoToolStripMenuItem.Text = "Esqueleto";
             this.esqueletoToolStripMenuItem.Click += new System.EventHandler(this.esqueletoToolStripMenuItem_Click);
             // 
             // giganteToolStripMenuItem
             // 
             this.giganteToolStripMenuItem.Name = "giganteToolStripMenuItem";
-            this.giganteToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.giganteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.giganteToolStripMenuItem.Text = "Gigante";
             this.giganteToolStripMenuItem.Click += new System.EventHandler(this.giganteToolStripMenuItem_Click);
             // 
             // globoToolStripMenuItem
             // 
             this.globoToolStripMenuItem.Name = "globoToolStripMenuItem";
-            this.globoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.globoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.globoToolStripMenuItem.Text = "Globo";
             this.globoToolStripMenuItem.Click += new System.EventHandler(this.globoToolStripMenuItem_Click);
             // 
             // mineroToolStripMenuItem
             // 
             this.mineroToolStripMenuItem.Name = "mineroToolStripMenuItem";
-            this.mineroToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.mineroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mineroToolStripMenuItem.Text = "Minero";
             this.mineroToolStripMenuItem.Click += new System.EventHandler(this.mineroToolStripMenuItem_Click);
             // 
             // magoToolStripMenuItem
             // 
             this.magoToolStripMenuItem.Name = "magoToolStripMenuItem";
-            this.magoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.magoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.magoToolStripMenuItem.Text = "Mago";
             this.magoToolStripMenuItem.Click += new System.EventHandler(this.magoToolStripMenuItem_Click);
             // 
             // pekkaToolStripMenuItem
             // 
             this.pekkaToolStripMenuItem.Name = "pekkaToolStripMenuItem";
-            this.pekkaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.pekkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pekkaToolStripMenuItem.Text = "Pekka";
             this.pekkaToolStripMenuItem.Click += new System.EventHandler(this.pekkaToolStripMenuItem_Click);
             // 
@@ -504,6 +505,13 @@
             this.recolectoraOroToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.recolectoraOroToolStripMenuItem.Text = "Recolectora de Oro";
             // 
+            // crearRecolectoraDeOroToolStripMenuItem
+            // 
+            this.crearRecolectoraDeOroToolStripMenuItem.Name = "crearRecolectoraDeOroToolStripMenuItem";
+            this.crearRecolectoraDeOroToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.crearRecolectoraDeOroToolStripMenuItem.Text = "Crear Recolectora de Oro";
+            this.crearRecolectoraDeOroToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeOroToolStripMenuItem_Click);
+            // 
             // recolectarOroToolStripMenuItem
             // 
             this.recolectarOroToolStripMenuItem.Name = "recolectarOroToolStripMenuItem";
@@ -520,10 +528,17 @@
             this.recolectoraDeElixirRojoToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.recolectoraDeElixirRojoToolStripMenuItem.Text = "Recolectora de Elixir Rojo";
             // 
+            // crearRecolectoraDeElixirRojoToolStripMenuItem
+            // 
+            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Name = "crearRecolectoraDeElixirRojoToolStripMenuItem";
+            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Text = "Crear Recolectora de Elixir Rojo";
+            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeElixirRojoToolStripMenuItem_Click);
+            // 
             // recolectarElixirRojoToolStripMenuItem
             // 
             this.recolectarElixirRojoToolStripMenuItem.Name = "recolectarElixirRojoToolStripMenuItem";
-            this.recolectarElixirRojoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.recolectarElixirRojoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.recolectarElixirRojoToolStripMenuItem.Text = "Recolectar Elixir Rojo";
             this.recolectarElixirRojoToolStripMenuItem.Click += new System.EventHandler(this.recolectarElixirRojoToolStripMenuItem_Click);
             // 
@@ -536,10 +551,17 @@
             this.recolectoraDeElixirNegroToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.recolectoraDeElixirNegroToolStripMenuItem.Text = "Recolectora de Elixir Negro";
             // 
+            // crearRecolectoraDeElixirNegroToolStripMenuItem
+            // 
+            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Name = "crearRecolectoraDeElixirNegroToolStripMenuItem";
+            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Text = "Crear recolectora de Elixir Negro";
+            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeElixirNegroToolStripMenuItem_Click);
+            // 
             // recolectarElixirNegroToolStripMenuItem
             // 
             this.recolectarElixirNegroToolStripMenuItem.Name = "recolectarElixirNegroToolStripMenuItem";
-            this.recolectarElixirNegroToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.recolectarElixirNegroToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.recolectarElixirNegroToolStripMenuItem.Text = "Recolectar Elixir Negro";
             this.recolectarElixirNegroToolStripMenuItem.Click += new System.EventHandler(this.recolectarElixirNegroToolStripMenuItem_Click);
             // 
@@ -572,14 +594,14 @@
             this.lblTropasNormales.TabIndex = 3;
             this.lblTropasNormales.Text = "Tropas Normales";
             // 
-            // listView1
+            // listTropaOscura
             // 
-            this.listView1.Location = new System.Drawing.Point(421, 59);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(148, 118);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listTropaOscura.Location = new System.Drawing.Point(412, 57);
+            this.listTropaOscura.Name = "listTropaOscura";
+            this.listTropaOscura.Size = new System.Drawing.Size(148, 118);
+            this.listTropaOscura.TabIndex = 4;
+            this.listTropaOscura.UseCompatibleStateImageBehavior = false;
+            this.listTropaOscura.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // lblTropasOscuras
             // 
@@ -859,7 +881,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(588, 41);
+            this.groupBox1.Controls.Add(this.elixirRojoAldea);
+            this.groupBox1.Location = new System.Drawing.Point(595, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(324, 100);
             this.groupBox1.TabIndex = 35;
@@ -913,7 +936,7 @@
             // elixirRojoAldea
             // 
             this.elixirRojoAldea.Enabled = false;
-            this.elixirRojoAldea.Location = new System.Drawing.Point(847, 63);
+            this.elixirRojoAldea.Location = new System.Drawing.Point(252, 18);
             this.elixirRojoAldea.Name = "elixirRojoAldea";
             this.elixirRojoAldea.Size = new System.Drawing.Size(52, 20);
             this.elixirRojoAldea.TabIndex = 2;
@@ -968,27 +991,6 @@
             this.lblCuartelesOscuros.TabIndex = 38;
             this.lblCuartelesOscuros.Text = "Cuarteles Oscuros";
             // 
-            // crearRecolectoraDeOroToolStripMenuItem
-            // 
-            this.crearRecolectoraDeOroToolStripMenuItem.Name = "crearRecolectoraDeOroToolStripMenuItem";
-            this.crearRecolectoraDeOroToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.crearRecolectoraDeOroToolStripMenuItem.Text = "Crear Recolectora de Oro";
-            this.crearRecolectoraDeOroToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeOroToolStripMenuItem_Click);
-            // 
-            // crearRecolectoraDeElixirRojoToolStripMenuItem
-            // 
-            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Name = "crearRecolectoraDeElixirRojoToolStripMenuItem";
-            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Text = "Crear Recolectora de Elixir Rojo";
-            this.crearRecolectoraDeElixirRojoToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeElixirRojoToolStripMenuItem_Click);
-            // 
-            // crearRecolectoraDeElixirNegroToolStripMenuItem
-            // 
-            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Name = "crearRecolectoraDeElixirNegroToolStripMenuItem";
-            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Text = "Crear recolectora de Elixir Negro";
-            this.crearRecolectoraDeElixirNegroToolStripMenuItem.Click += new System.EventHandler(this.crearRecolectoraDeElixirNegroToolStripMenuItem_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1014,8 +1016,6 @@
             this.Controls.Add(this.lblOro);
             this.Controls.Add(this.lblCuarteles);
             this.Controls.Add(this.elixirNegroAldea);
-            this.Controls.Add(this.elixirRojoAldea);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.espacioLibreAldea);
             this.Controls.Add(this.lblTropas);
             this.Controls.Add(this.oroAldea);
@@ -1048,14 +1048,17 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.lblTropasOscuras);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listTropaOscura);
             this.Controls.Add(this.lblTropasNormales);
             this.Controls.Add(this.listTropasNormales);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1107,7 +1110,7 @@
         private System.Windows.Forms.ToolStripMenuItem recolectoraDeElixirNegroToolStripMenuItem;
         private System.Windows.Forms.ListView listTropasNormales;
         private System.Windows.Forms.Label lblTropasNormales;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listTropaOscura;
         private System.Windows.Forms.Label lblTropasOscuras;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;

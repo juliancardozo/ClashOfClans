@@ -358,6 +358,7 @@ namespace ClashOfClans
                 String[] nuevo = { "Campamento" };
                 var nuevoAgregar = new ListViewItem(nuevo);
                 listCampamentos.Items.Add(nuevoAgregar);
+                this.ActualizarRecursos();
             }
         }
 
@@ -418,50 +419,60 @@ namespace ClashOfClans
 
         private void águilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("Aguila");
-            String[] nuevo = { "Aguila" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioDefensivo("Aguila")) { 
+                String[] nuevo = { "Aguila" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void ballestaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioDefensivo("Ballesta");
-            String[] nuevo = { "Ballesta" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView2.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioDefensivo("Ballesta")) { 
+                String[] nuevo = { "Ballesta" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView2.Items.Add(nuevoAgregar);
+            }
         }
 
         private void crearRecolectoraDeOroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioRecolectoraOro();
-            String[] nuevo = { "RecolectoraOro" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listRecolectoraOro.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioRecolectoraOro()) { 
+                String[] nuevo = { "RecolectoraOro" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listRecolectoraOro.Items.Add(nuevoAgregar);
+            }
         }
 
         private void crearRecolectoraDeElixirRojoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioRecolectoraOro();
-            String[] nuevo = { "RecolectoraER" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listRecolectoraElixirRojo.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioRecolectoraElixirRojo()) { 
+                String[] nuevo = { "RecolectoraER" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listRecolectoraElixirRojo.Items.Add(nuevoAgregar);
+            }
         }
 
         private void crearRecolectoraDeElixirNegroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            miAldea.crearEdificioRecolectoraOro();
-            String[] nuevo = { "RecolectoraEN" };
-            var nuevoAgregar = new ListViewItem(nuevo);
-            listView3.Items.Add(nuevoAgregar);
+            if (miAldea.crearEdificioRecolectoraElixirNegro())
+            {
+                String[] nuevo = { "RecolectoraEN" };
+                var nuevoAgregar = new ListViewItem(nuevo);
+                listView3.Items.Add(nuevoAgregar);
+            }
         }
 
         private void esbirroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("Esbirro");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("Esbirro")) {
+                    String[] nuevo = { "Esbirro" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -473,8 +484,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("Lava");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("Lava"))
+                {
+                    String[] nuevo = { "Lava" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -486,8 +502,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("LanzaRocas");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("LanzaRocas"))
+                {
+                    String[] nuevo = { "LanzaRocas" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -499,8 +520,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("montaPuercos");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("MontaPuercos"))
+                {
+                    String[] nuevo = { "MontaPuercos" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -512,8 +538,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("Bruja");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("Bruja"))
+                {
+                    String[] nuevo = { "Bruja" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -525,8 +556,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("Golem");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("Golem"))
+                {
+                    String[] nuevo = { "Golem" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
@@ -538,8 +574,13 @@ namespace ClashOfClans
         {
             if (miAldea.cuartelesOscuro.Count > 0)
             {
-                miAldea.cuartelesOscuro[0].crearTropaOscura("Valkiria");
-                ActualizarRecursos();
+                if (miAldea.cuartelesOscuro[0].crearTropaOscura("Valkiria"))
+                {
+                    String[] nuevo = { "Valkiria" };
+                    var nuevoAgregar = new ListViewItem(nuevo);
+                    listTropaOscura.Items.Add(nuevoAgregar);
+                    ActualizarRecursos();
+                }
             }
             else
             {
