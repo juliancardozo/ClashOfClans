@@ -115,14 +115,12 @@ namespace ClashOfClans
         public Int32 EspaciosDisponibles()
         {
             Int32 total = 0;
-            foreach (Campamento campamento in campamentos)
-            {
-                total += campamento.espacio;
-            }
-            if (castillo != null)
-            {
-                total += castillo.espacio;
-            }
+            foreach (Campamento campamento in campamentos) { total += campamento.espacio; }
+            if (castillo != null){ total += castillo.espacio; }
+
+            // Resto las tropas
+            foreach (ITropaNormal tropa in tropasNormales) { total -= tropa.espacio; }
+            foreach (ITropaOscura tropa in tropasOscuras) { total -= tropa.espacio; }
 
             return total;
         }
