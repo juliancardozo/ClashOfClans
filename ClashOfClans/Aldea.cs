@@ -52,7 +52,7 @@ namespace ClashOfClans
             recolectorasElixirRojo = new List<RecolectoraElixirRojo>();
             recolectorasElixirNegro = new List<RecolectoraElixirNegro>();
 
-        constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
+            constructoresTropaNormal = new Dictionary<string, IFactoryTropaNormal>();
             constructoresTropaNormal.Add("Arquera", new FactoryArquera());
             constructoresTropaNormal.Add("Barbaro", new FactoryBarbaro());
             constructoresTropaNormal.Add("Gigante", new FactoryGigante());
@@ -137,7 +137,10 @@ namespace ClashOfClans
         public Int32 EspaciosDisponibles()
         {
             Int32 total = 0;
-            foreach (Campamento campamento in campamentos) { total += campamento.espacio; }
+            if(campamentos.Count > 0)
+            {
+                foreach (Campamento campamento in campamentos) { total += campamento.espacio; }
+            }
             if (castillo != null){ total += castillo.espacio; }
 
             // Resto las tropas
