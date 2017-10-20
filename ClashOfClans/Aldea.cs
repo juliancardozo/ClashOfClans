@@ -9,7 +9,9 @@ namespace ClashOfClans
 
     /// <summary>
     /// Todos los metodos para crear edificios devuelven un valor booleano para saber si la operacion se realizo con exito o no. Para de esta forma saber si corresponde actualizar un listado de windowsForm.
-    /// Hay un List para cada tipo de edificio, segun esta el UML.
+    /// La información de las propiedades se encuentra en el UML
+    /// El nombre de la aldea se pasa en el constructor
+    /// Al instanciar la aldea ya crea un ayuntamiento y castillo
     /// </summary>
 
     public class Aldea
