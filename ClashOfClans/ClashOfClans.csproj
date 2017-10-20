@@ -96,11 +96,7 @@
     <Compile Include="FactoryEdificio\FactoryTorreInfierno.cs" />
     <Compile Include="FactoryEdificio\FactoryTorreArquera.cs" />
     <Compile Include="FactoryEdificio\FactoryTorreMago.cs" />
-    <Compile Include="FactoryEdificio\IFactoryAlmacen.cs" />
-    <Compile Include="FactoryEdificio\IFactoryRecolectora.cs" />
-    <Compile Include="FactoryEdificio\IFactoryProduccion.cs" />
     <Compile Include="FactoryEdificio\IFactoryEdificioDefensivo.cs" />
-    <Compile Include="FactoryEdificio\IFactoryEdificio.cs" />
     <Compile Include="Gigante.cs" />
     <Compile Include="Globo.cs" />
     <Compile Include="Golem.cs" />
